@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="@dimen/pad_10dp"
+   >
+
+    <TextView
+        android:id="@+id/tvUserName_ListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_5dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_18sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvText_ListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName_ListItem"
+        android:layout_marginLeft="@dimen/pad_5dp"
+        android:text="my pics @futala..."
+        android:maxLines="2"
+        android:textColor="@color/DimGray"
+        android:textSize="@dimen/txt_12sp"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvTime_ListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_5dp"
+        android:text="12:30 PM"
+        android:textColor="@color/DimGray"
+        android:textSize="@dimen/txt_12sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+    </TextView>
+</RelativeLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/list_item.xml -->

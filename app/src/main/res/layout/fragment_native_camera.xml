@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+
+        >
+
+
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/ivCancelPhoto"
+            android:layout_width="@dimen/pad_50dp"
+            android:layout_height="@dimen/pad_50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="@dimen/pad_10dp"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/ic_cancel_photo"/>
+
+        <ImageView
+            android:id="@+id/ivSwitchCamera"
+            android:layout_width="@dimen/pad_50dp"
+            android:layout_height="@dimen/pad_50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ivCancelPhoto"
+
+            android:layout_gravity="right|top"
+            android:layout_margin="@dimen/pad_10dp"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/ic_switch_camera"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/innerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlPhotoSetting"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/ivCapture"
+            android:layout_width="@dimen/pad_80dp"
+            android:layout_height="@dimen/pad_80dp"
+            android:layout_gravity="bottom"
+
+            android:src="@drawable/ic_capture"
+
+            android:text="Capture"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPhotoSetting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad_50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Transparent_50_black"
+        >
+
+        <ImageView
+            android:id="@+id/ivText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+
+            android:src="@drawable/ic_text"/>
+
+        <ImageView
+            android:id="@+id/ivTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+
+            android:layout_toRightOf="@+id/ivText"
+            android:src="@drawable/ic_time"/>
+
+
+        <ImageView
+            android:id="@+id/ivDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_toRightOf="@+id/ivTime"
+
+            android:src="@drawable/ic_date"/>
+
+      <ImageView
+            android:id="@+id/ivGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_toRightOf="@+id/ivSave"
+
+            android:src="@drawable/ic_gps"/>
+
+        <ImageView
+            android:id="@+id/ivSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_toRightOf="@+id/ivDatePicker"
+
+            android:src="@drawable/ic_save"/>
+
+        <ImageView
+            android:id="@+id/ivSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/pad_10dp"
+
+            android:src="@drawable/ic_send"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etTextToPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_centerInParent="true"
+
+        android:background="@color/Transparent_50_black"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="@dimen/pad_5dp"
+        android:focusable="true"
+        android:textColor="@color/white"/>
+</RelativeLayout>

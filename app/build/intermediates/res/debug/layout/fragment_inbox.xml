@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad_50dp"
+        android:background="@color/CornflowerBlue"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/pad_15dp"
+            android:text="Caixia"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/txt_24sp"
+            />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:src="@drawable/ic_search"/>
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:src="@drawable/ic_search"/>
+
+    </RelativeLayout>-->
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/lvInbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/lighter_gray"
+
+        android:dividerHeight="@dimen/pad_1dp"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/fragment_inbox.xml -->

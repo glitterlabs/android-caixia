@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context="com.glitterlabs.com.Activities.MyFriendsActivity">
+
+    <ListView
+        android:id="@+id/lvMyFrendList"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSend_Myfriends"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/btnSend_Myfriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:background="@color/primaryColor"
+        android:text="Send"/>
+
+</RelativeLayout>
+<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/activity_my_friends.xml -->

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="vertical"
+                tools:context="com.glitterlabs.com.Activities.AddFriendAvtivity">
+
+    <ProgressBar
+        android:id="@+id/progressbar_AddFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/pad_10dp"
+
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_searchedFriends"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/activity_add_friend.xml -->
