@@ -59,4 +59,4 @@
         android:dividerHeight="@dimen/pad_1dp"/>
 
     </android.support.v4.widget.SwipeRefreshLayout>
-    </LinearLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/fragment_inbox.xml -->
+    </LinearLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/fragment_inbox.xml -->

@@ -28,12 +28,12 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.glitterlabs.caixia.Activities.MyFriendsActivity;
+import com.glitterlabs.caixia.util.GeoPointParse;
 import com.glitterlabs.caixia.Adapters.TimerAdapter;
 import com.glitterlabs.caixia.Models.MessageData;
+import com.glitterlabs.caixia.MyFriendsActivity;
 import com.glitterlabs.caixia.R;
 import com.glitterlabs.caixia.util.GPSTracker;
-import com.glitterlabs.caixia.util.GeoPointParse;
 import com.glitterlabs.caixia.util.Helper;
 
 import java.io.File;

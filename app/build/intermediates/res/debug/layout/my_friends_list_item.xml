@@ -28,4 +28,4 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignBottom="@+id/cbMyFriendName_listItem"/>
-</RelativeLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/my_friends_list_item.xml -->
+</RelativeLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/my_friends_list_item.xml -->

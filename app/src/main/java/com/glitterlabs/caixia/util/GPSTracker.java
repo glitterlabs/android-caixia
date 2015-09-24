@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.parse.GetCallback;
 import com.parse.ParseException;
@@ -194,11 +193,11 @@ public class GPSTracker extends Service implements LocationListener {
     @Override
     public void onLocationChanged(Location location) {
 
-        double latitude = location.getLatitude();
+      /*  double latitude = location.getLatitude();
         double longitude = location.getLongitude();
         Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
         //check current location base message
-        checkLocationBaseMessage(new GeoPointParse(latitude, longitude));
+        checkLocationBaseMessage(new GeoPointParse(latitude, longitude));*/
     }
 
     @Override

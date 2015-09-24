@@ -13,4 +13,4 @@
         android:state_focused="false"
         android:drawable="@drawable/selected" />
 
-</selector><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/drawable/list_item_selector.xml -->
+</selector><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/drawable/list_item_selector.xml -->

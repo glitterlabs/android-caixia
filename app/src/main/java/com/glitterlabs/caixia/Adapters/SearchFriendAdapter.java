@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.glitterlabs.caixia.Activities.AddFriendAvtivity;
+import com.glitterlabs.caixia.AddFriendAvtivity;
 import com.glitterlabs.caixia.Databases.DatabseHelper;
 import com.glitterlabs.caixia.Models.Friend;
 import com.glitterlabs.caixia.R;

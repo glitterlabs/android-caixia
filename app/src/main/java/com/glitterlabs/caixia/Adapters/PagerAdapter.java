@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.glitterlabs.caixia.Fragments.CameraFragmentFirst;
 import com.glitterlabs.caixia.Fragments.InboxFragment;
 
+
 /*
     Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
     All rights reserved. Patents pending.
