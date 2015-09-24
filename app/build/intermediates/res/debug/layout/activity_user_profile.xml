@@ -13,20 +13,16 @@
     android:background="@color/Transparent_50_black"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="@dimen/pad_180dp"
-    android:layout_height="@dimen/pad_180dp"
-        android:id="@+id/ivUserProfilePhoto"
-        android:src="@drawable/user"
-        android:layout_gravity="center_horizontal"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_100dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Jhon Smith"
         android:textSize="@dimen/txt_27sp"
-        android:id="@+id/textView3"
+        android:id="@+id/tvName_UserProfile"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"/>
     <TextView
@@ -34,9 +30,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="jhon@smith"
-
-        android:id="@+id/textView"
-        android:textColor="@color/white"
+        android:id="@+id/tvUsername_UserProfile"
+        android:textColor="@color/primaryColor"
         android:layout_gravity="center_horizontal"/>
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +39,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Added me"
         android:textSize="@dimen/txt_36sp"
-        android:id="@+id/tvAddedMe"
+        android:id="@+id/tvAddedMe_UserProfile"
         android:drawableLeft="@drawable/ic_user"
         android:layout_marginTop="@dimen/pad_40dp"
         android:textColor="@color/white"
@@ -55,7 +50,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Add Friends"
         android:textSize="@dimen/txt_36sp"
-        android:id="@+id/tvAddFriends"
+        android:id="@+id/tvAddFriends_UserProfile"
         android:drawableLeft="@drawable/ic_add_friend"
         android:layout_marginTop="@dimen/pad_10dp"
         android:textColor="@color/white"
@@ -66,11 +61,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="My Friends"
         android:textSize="@dimen/txt_36sp"
-        android:id="@+id/tvMyFriends"
+        android:id="@+id/tvMyFriends_UserProfile"
         android:drawableLeft="@drawable/ic_friendslist"
         android:layout_marginTop="@dimen/pad_10dp"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>
 </RelativeLayout>
-<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/activity_user_profile.xml -->
+<!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/activity_user_profile.xml -->

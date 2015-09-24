@@ -34,4 +34,4 @@
        android:background="@color/primaryColor"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-</RelativeLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/search_friend_list_item.xml -->
+</RelativeLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/search_friend_list_item.xml -->

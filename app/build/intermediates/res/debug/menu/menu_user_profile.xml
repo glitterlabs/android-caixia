@@ -2,10 +2,21 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.glitterlabs.caixia.Activities.UserProfileActivity">
+    <item android:id="@+id/action_feedback"
+          android:title="@string/action_settings"
+          android:icon="@drawable/ic_text"
+          android:orderInCategory="100"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_Share"
+          android:title="@string/action_settings"
+          android:icon="@drawable/ic_shear"
+          android:orderInCategory="100"
+          app:showAsAction="always"/>
     <item android:id="@+id/action_settings"
           android:title="@string/action_settings"
           android:icon="@drawable/ic_setting"
           android:orderInCategory="100"
           app:showAsAction="always"/>
+
 </menu>
-<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/menu/menu_user_profile.xml -->
+<!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/menu/menu_user_profile.xml -->

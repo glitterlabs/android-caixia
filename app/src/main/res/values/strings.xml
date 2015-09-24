@@ -23,24 +23,16 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="alert_wait">Please wait..</string>
 
-    <array name="inbox" >
-    <item>Jhon Smoth</item>
-    <item>Tayly lautner</item>
-    <item>Joni Deep</item>
-    <item>Jhon Smoth</item>
-    <item>Tayly lautner</item>
-    <item>Joni Deep</item>
 
-    <item>Jhon Smoth</item>
-    <item>Tayly lautner</item>
-    <item>Joni Deep</item>
-</array>
+
     <string name="title_activity_message_display">MessageDisplayActivity</string>
     <string name="title_activity_add_friend">Add Friend</string>
     <string name="menu_search">search</string>
     <string name="title_activity_my_friends">Send To..</string>
     <string name="action_add_fiends">Add Friends</string>
     <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_preview_photo">PreviewPhotoActivity</string>
+    <string name="title_activity_feed_back">FeedBack</string>
 
 
 </resources>

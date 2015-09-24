@@ -9,4 +9,4 @@
         android:layout_height="@dimen/pad_240dp"
         android:id="@+id/lvTimer"
         android:layout_gravity="center_horizontal"/>
-</LinearLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/timer_list.xml -->
+</LinearLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/timer_list.xml -->
