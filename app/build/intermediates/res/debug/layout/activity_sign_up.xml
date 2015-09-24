@@ -60,7 +60,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
-                android:hint="Caixia User Name"
+                android:hint="User Name"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:textColor="@color/white"
@@ -136,4 +136,4 @@
         </LinearLayout>
 
     </ScrollView>
-</LinearLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/activity_sign_up.xml -->
+</LinearLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/activity_sign_up.xml -->

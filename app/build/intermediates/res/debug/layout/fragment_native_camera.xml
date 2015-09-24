@@ -77,14 +77,14 @@
     <RelativeLayout
         android:id="@+id/rlPhotoSetting"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/pad_70dp"
+        android:layout_height="@dimen/pad_50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/Transparent_50_black"
         >
 
         <ImageView
             android:id="@+id/ivText"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
@@ -96,7 +96,7 @@
 
         <ImageView
             android:id="@+id/ivTime"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentTop="true"
@@ -108,7 +108,7 @@
 
         <ImageView
             android:id="@+id/ivDatePicker"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentTop="true"
@@ -119,7 +119,7 @@
 
       <ImageView
             android:id="@+id/ivGPS"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_alignParentBottom="true"
@@ -131,7 +131,7 @@
 
         <ImageView
             android:id="@+id/ivSave"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentTop="true"
@@ -142,7 +142,7 @@
 
         <ImageView
             android:id="@+id/ivSend"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
@@ -168,4 +168,4 @@ android:layout_centerInParent="true"
         android:focusable="true"
         android:textColor="@color/white"/>
 </RelativeLayout>
-<!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/fragment_native_camera.xml -->
+<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/fragment_native_camera.xml -->

@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/mohinish/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-1f3437e4282ea83d0770498d2705b6faf4c3bc80.jar" />
-    </item>
-    <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/libs/Parse-1.4.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8daf146aea8cd5245bb90f802f2cd4b8dd855eca">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/Parse-1.4.3-7567455213c376ab66eb3f1dc84d47976d57db8f.jar" />
-    </item>
-    <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7912610ed96381c25c36d986eba422731b9641b6">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/classes-eb6e223660ac256afc39108ef8f0ed4def8d7441.jar" />
-    </item>
-    <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/classes-73108af381219aaf4c20e4eda99dbbc83aea71dd.jar" />
-    </item>
-    <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-508cc252eba6993dc97cbd49dfb20858e8f97c35.jar" />
-    </item>
-    <item
         jar="/Users/mohinish/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-eb0aa2ecded4c9e98ca7dd62d16ec42ba6c796e5.jar" />
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-eb0aa2ecded4c9e98ca7dd62d16ec42ba6c796e5.jar" />
     </item>
     <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/exploded-aar/com.makeramen/roundedimageview/2.2.0/jars/classes.jar"
+        jar="/Users/mohinish/Desktop/Caixia/app/libs/gcm.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="149d269764e1ad8d24e18e8cb71cd6b95062f3d1">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/classes-ae7145e38d56f7c27b4c778351175100964d9abd.jar" />
+        sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/gcm-aea1830cb46e82eca00d5ed84983195113ea2450.jar" />
     </item>
     <item
-        jar="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/mohinish/Desktop/Caixia/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-ac68e764b47907874b1122d8d0f6efd0d29b2c8b.jar" />
+    </item>
+    <item
+        jar="/Users/mohinish/Desktop/Caixia/app/libs/Parse-1.4.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8daf146aea8cd5245bb90f802f2cd4b8dd855eca">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/Parse-1.4.3-5ca5db6522f2d2db92603148737224e1b32db914.jar" />
+    </item>
+    <item
+        jar="/Users/mohinish/Desktop/Caixia/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/mohinish/Desktop/ParsePushExample/app/build/intermediates/pre-dexed/debug/classes-eba66321f7ece6f2d520e02de2fc6775eb6769eb.jar" />
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/classes-a831593211475c412c5584fb1851b235823e7cca.jar" />
+    </item>
+    <item
+        jar="/Users/mohinish/Desktop/Caixia/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/classes-b709da3002055ae3bb8cf32c2b798fb8399a94fc.jar" />
+    </item>
+    <item
+        jar="/Users/mohinish/Desktop/Caixia/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/classes-02f2f57b7d1719b11170a0723a415bb593ee3bd5.jar" />
+    </item>
+    <item
+        jar="/Users/mohinish/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/mohinish/Desktop/Caixia/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-1f3437e4282ea83d0770498d2705b6faf4c3bc80.jar" />
     </item>
 
 </items>

@@ -11,4 +11,4 @@
     android:textColor="@color/white"
     android:text="text"
     android:padding="@dimen/pad_10dp"/>
-</LinearLayout><!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/timer_list_item.xml -->
+</LinearLayout><!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/timer_list_item.xml -->

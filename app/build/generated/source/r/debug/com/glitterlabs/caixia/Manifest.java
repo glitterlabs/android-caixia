@@ -9,12 +9,13 @@ package com.glitterlabs.caixia;
 
 public final class Manifest {
     public static final class permission {
-        /** 
+        /**  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+
 	  IMPORTANT: If you change the package name of this sample app, change
 	  "com.parse.tutorials.pushnotifications.permission.C2D_MESSAGE" in the
 	  lines below to match the new package name.
     
          */
-        public static final String C2D_MESSAGE="com.glitterlabs.caixia.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="com.glitterlabs.caixia.Activities.permission.C2D_MESSAGE";
     }
 }

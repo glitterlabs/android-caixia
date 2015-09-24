@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.glitterlabs.caixia.R;
 
-
 /**
  * Created by mohinish on 8/8/15.
  */

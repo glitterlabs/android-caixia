@@ -10,4 +10,4 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="ifRoom"/>
 </menu>
-<!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/menu/menu_add_friend.xml -->
+<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/menu/menu_add_friend.xml -->

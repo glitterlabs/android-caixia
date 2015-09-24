@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.glitterlabs.caixia.MessageDisplayActivity;
+import com.glitterlabs.caixia.Activities.MessageDisplayActivity;
 import com.glitterlabs.caixia.Models.InboxList;
 import com.glitterlabs.caixia.R;
 

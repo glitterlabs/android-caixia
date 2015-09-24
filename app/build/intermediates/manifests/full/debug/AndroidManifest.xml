@@ -17,9 +17,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+
 
     <!--
 	  IMPORTANT: If you change the package name of this sample app, change
@@ -27,23 +30,25 @@
 	  lines below to match the new package name.
     -->
     <permission
-        android:name="com.glitterlabs.caixia.permission.C2D_MESSAGE"
+        android:name="com.glitterlabs.caixia.Activities.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.glitterlabs.caixia.permission.C2D_MESSAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.glitterlabs.caixia.Activities.permission.C2D_MESSAGE" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.glitterlabs.caixia.Application"
+        android:name="com.glitterlabs.caixia.Activities.CaixiaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.glitterlabs.caixia.SplashActivity"
+            android:name="com.glitterlabs.caixia.Activities.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/MyTheme" >
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,50 +56,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.glitterlabs.caixia.MainActivity"
+            android:name="com.glitterlabs.caixia.Activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
-            android:name="com.glitterlabs.caixia.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.Base" >
-        </activity>
-        <activity
-            android:name="com.glitterlabs.caixia.SignUpActivity"
+            android:name="com.glitterlabs.caixia.Activities.SignUpActivity"
             android:label="@string/title_activity_sign_up"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
-            android:name="com.glitterlabs.caixia.MessageDisplayActivity"
+            android:name="com.glitterlabs.caixia.Activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.Base" >
+        </activity>
+        <activity
+            android:name="com.glitterlabs.caixia.Activities.MessageDisplayActivity"
             android:label="@string/title_activity_message_display"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
-            android:name="com.glitterlabs.caixia.AddFriendAvtivity"
+            android:name="com.glitterlabs.caixia.Activities.AddFriendAvtivity"
             android:label="@string/title_activity_add_friend"
             android:theme="@style/MyCustomToolBarTheme" >
         </activity>
         <activity
-            android:name="com.glitterlabs.caixia.MyFriendsActivity"
+            android:name="com.glitterlabs.caixia.Activities.MyFriendsActivity"
             android:label="@string/title_activity_my_friends"
-            android:theme="@style/MyCustomToolBarTheme" >
-        </activity>
-        <activity
-            android:name="com.glitterlabs.caixia.UserProfileActivity"
-            android:label="@string/title_activity_user_profile"
-            android:screenOrientation="portrait"
-            android:theme="@style/MyCustomToolBarTheme" >
-        </activity>
-        <activity
-            android:name="com.glitterlabs.caixia.PreviewPhotoActivity"
-            android:label="@string/title_activity_preview_photo"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Base" >
-        </activity>
-        <activity
-            android:name="com.glitterlabs.caixia.FeedBackActivity"
-            android:label="@string/title_activity_feed_back"
             android:theme="@style/MyCustomToolBarTheme" >
         </activity>
 
@@ -118,9 +106,15 @@
 				  change "com.parse.tutorials.pushnotifications" in the lines
 				  below to match the new package name.
                 -->
-                <category android:name="com.glitterlabs.caixia" />
+                <category android:name="com.glitterlabs.caixia.Activities" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.glitterlabs.caixia.Activities.UserProfileActivity"
+            android:label="@string/title_activity_user_profile"
+            android:theme="@style/MyCustomToolBarTheme" >
+        </activity>
     </application>
 
 </manifest>

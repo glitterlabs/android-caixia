@@ -118,7 +118,7 @@ android:layout_marginTop="@dimen/pad_15dp"
         android:layout_height="wrap_content"
 
         android:gravity="center"
-
+        android:padding="10dp"
         android:text="Create an acount"
 
         android:textColor="@color/CornflowerBlue"

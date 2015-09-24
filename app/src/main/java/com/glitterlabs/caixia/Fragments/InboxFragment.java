@@ -1,31 +1,31 @@
 package com.glitterlabs.caixia.Fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.glitterlabs.caixia.Activities.LoginActivity;
+import com.glitterlabs.caixia.Activities.UserProfileActivity;
 import com.glitterlabs.caixia.Adapters.InboxAdapter;
 import com.glitterlabs.caixia.Models.InboxList;
-import com.glitterlabs.caixia.PreviewPhotoActivity;
-import com.glitterlabs.caixia.UserProfileActivity;
+import com.glitterlabs.caixia.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
-import com.parse.ParseInstallation;
 import com.parse.ParseObject;
-import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.parse.SendCallback;
-import com.glitterlabs.caixia.R;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -79,17 +79,11 @@ public class InboxFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), UserProfileActivity.class));
+             //   showLogoutDilog("Logout", "Do you want to logout?", getActivity());
 
-                sendPush();
             }
         });
-        ImageView ivPreview = (ImageView) toolbar.findViewById(R.id.ivPreview);
-        ivPreview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), PreviewPhotoActivity.class));
-            }
-        });
+
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -102,29 +96,6 @@ public class InboxFragment extends Fragment {
         return view;
     }
 
-    public void sendPush() {
-
-        // Find devices associated with these users
-        ParseQuery pushQuery = ParseInstallation.getQuery();
-        // pushQuery.whereEqualTo("userId", "opsSRJaQMz");
-        pushQuery.whereEqualTo("deviceType", "android");
-        // Send push notification to query
-        ParsePush push = new ParsePush();
-        push.setQuery(pushQuery); // Set our Installation query
-        push.setMessage("Abhay sent you friend request..!");
-        push.sendInBackground
-                (new SendCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        if (e == null) {
-                            Toast.makeText(getActivity(), "Success push", Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(getActivity(), "fail push", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-
-    }
 
     public void getInboxData() {
 
@@ -170,8 +141,29 @@ public class InboxFragment extends Fragment {
 
     }
 
+    public void showLogoutDilog(String title, String message, Context context) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+        alertDialogBuilder.setTitle(title);
+        alertDialogBuilder.setMessage(message);
 
+        alertDialogBuilder.setCancelable(false);
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                ParseUser.logOut();
+                getActivity().finish();
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
+        });
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
 
+        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
 
     private String getCurrentTime() {
         Calendar c = Calendar.getInstance();
