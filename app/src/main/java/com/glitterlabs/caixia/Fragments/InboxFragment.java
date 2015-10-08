@@ -148,6 +148,7 @@ public class InboxFragment extends Fragment {
                         inboxList.setSenderName(objects.get(i).getString("senderName"));
                         inboxList.setTextMessage(objects.get(i).getString("text"));
                         inboxList.setCurrentTime(getCurrentTime());
+                        inboxList.setStatus(objects.get(i).getInt("isSeen"));
                         inboxData.add(inboxList);
 
                     }

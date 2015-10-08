@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.glitterlabs.caixia.Adapters.MyFrendsListAdapter;
+import com.glitterlabs.caixia.Adapters.FrendsListAdapter;
 import com.glitterlabs.caixia.Databases.DatabseHelper;
 import com.glitterlabs.caixia.Models.Friend;
 import com.glitterlabs.caixia.Models.MessageData;
@@ -31,7 +31,7 @@ public class MyFriendsActivity extends AppCompatActivity {
     DatabseHelper mdatabase = new DatabseHelper(this);
     private ListView lvFriends;
     private Button btnSend;
-    private MyFrendsListAdapter mAdapter;
+    private FrendsListAdapter mAdapter;
     String curentUsername = ParseUser.getCurrentUser().getString("Name");
     MessageData messageData;
     ProgressDialog progressDialog;
@@ -46,7 +46,7 @@ public class MyFriendsActivity extends AppCompatActivity {
         messageData = (MessageData) getIntent().getSerializableExtra("messageData");
 
         lvFriends = (ListView) findViewById(R.id.lvMyFrendList);
-        mAdapter = new MyFrendsListAdapter(this, getAllFrends());
+        mAdapter = new FrendsListAdapter(this, getAllFrends());
         lvFriends.setAdapter(mAdapter);
         btnSend = (Button) findViewById(R.id.btnSend_Myfriends);
         btnSend.setOnClickListener(new View.OnClickListener() {
@@ -83,9 +83,10 @@ public class MyFriendsActivity extends AppCompatActivity {
                 inbox.put("text", messageData.getTextMessage());
                 inbox.put("timeToDisplayImage", messageData.getTimeForDisplay());
                 inbox.put("scheduledDate", messageData.getScheduldDate());
+
                 inbox.put("location", messageData.getGeoPoint());
                 inbox.put("image", parseImgeFile);
-                inbox.put("isSeen",false);
+                inbox.put("isSeen",0);
                 inbox.saveInBackground(new SaveCallback() {
 
                     @Override
@@ -141,7 +142,7 @@ public class MyFriendsActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAdapter = new MyFrendsListAdapter(this, getAllFrends());
+        mAdapter = new FrendsListAdapter(this, getAllFrends());
         lvFriends.setAdapter(mAdapter);
 
     }

@@ -83,158 +83,166 @@ ADDED from AndroidManifest.xml:33:5
 	android:name
 		ADDED from AndroidManifest.xml:33:22
 uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:34:5
+	android:name
+		ADDED from AndroidManifest.xml:34:22
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from AndroidManifest.xml:35:5
 	android:name
 		ADDED from AndroidManifest.xml:35:22
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from AndroidManifest.xml:36:5
-	android:name
-		ADDED from AndroidManifest.xml:36:22
 application
-ADDED from AndroidManifest.xml:38:5
+ADDED from AndroidManifest.xml:37:5
 MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.astuetz:pagerslidingtabstrip:1.0.1:4:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 	android:label
-		ADDED from AndroidManifest.xml:42:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:40:9
-	android:icon
 		ADDED from AndroidManifest.xml:41:9
-	android:theme
-		ADDED from AndroidManifest.xml:43:9
-	android:name
+	android:allowBackup
 		ADDED from AndroidManifest.xml:39:9
+	android:icon
+		ADDED from AndroidManifest.xml:40:9
+	android:theme
+		ADDED from AndroidManifest.xml:42:9
+	android:name
+		ADDED from AndroidManifest.xml:38:9
 activity#com.glitterlabs.caixia.SplashActivity
-ADDED from AndroidManifest.xml:44:9
+ADDED from AndroidManifest.xml:43:9
 	android:label
-		ADDED from AndroidManifest.xml:46:13
-	android:theme
-		ADDED from AndroidManifest.xml:47:13
-	android:name
 		ADDED from AndroidManifest.xml:45:13
+	android:theme
+		ADDED from AndroidManifest.xml:46:13
+	android:name
+		ADDED from AndroidManifest.xml:44:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:48:13
+ADDED from AndroidManifest.xml:47:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:49:17
+ADDED from AndroidManifest.xml:48:17
 	android:name
-		ADDED from AndroidManifest.xml:49:25
+		ADDED from AndroidManifest.xml:48:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:51:17
+ADDED from AndroidManifest.xml:50:17
 	android:name
-		ADDED from AndroidManifest.xml:51:27
+		ADDED from AndroidManifest.xml:50:27
 activity#com.glitterlabs.caixia.MainActivity
-ADDED from AndroidManifest.xml:54:9
+ADDED from AndroidManifest.xml:53:9
 	android:label
-		ADDED from AndroidManifest.xml:56:13
-	android:theme
-		ADDED from AndroidManifest.xml:57:13
-	android:name
 		ADDED from AndroidManifest.xml:55:13
+	android:theme
+		ADDED from AndroidManifest.xml:56:13
+	android:name
+		ADDED from AndroidManifest.xml:54:13
 activity#com.glitterlabs.caixia.LoginActivity
-ADDED from AndroidManifest.xml:59:9
+ADDED from AndroidManifest.xml:58:9
 	android:label
-		ADDED from AndroidManifest.xml:61:13
-	android:theme
-		ADDED from AndroidManifest.xml:62:13
-	android:name
 		ADDED from AndroidManifest.xml:60:13
+	android:theme
+		ADDED from AndroidManifest.xml:61:13
+	android:name
+		ADDED from AndroidManifest.xml:59:13
 activity#com.glitterlabs.caixia.SignUpActivity
-ADDED from AndroidManifest.xml:64:9
+ADDED from AndroidManifest.xml:63:9
 	android:label
-		ADDED from AndroidManifest.xml:66:13
-	android:theme
-		ADDED from AndroidManifest.xml:67:13
-	android:name
 		ADDED from AndroidManifest.xml:65:13
+	android:theme
+		ADDED from AndroidManifest.xml:66:13
+	android:name
+		ADDED from AndroidManifest.xml:64:13
 activity#com.glitterlabs.caixia.MessageDisplayActivity
-ADDED from AndroidManifest.xml:69:9
+ADDED from AndroidManifest.xml:68:9
 	android:label
-		ADDED from AndroidManifest.xml:71:13
-	android:theme
-		ADDED from AndroidManifest.xml:72:13
-	android:name
 		ADDED from AndroidManifest.xml:70:13
+	android:theme
+		ADDED from AndroidManifest.xml:71:13
+	android:name
+		ADDED from AndroidManifest.xml:69:13
 activity#com.glitterlabs.caixia.AddFriendAvtivity
-ADDED from AndroidManifest.xml:74:9
+ADDED from AndroidManifest.xml:73:9
 	android:label
-		ADDED from AndroidManifest.xml:76:13
-	android:theme
-		ADDED from AndroidManifest.xml:77:13
-	android:name
 		ADDED from AndroidManifest.xml:75:13
+	android:theme
+		ADDED from AndroidManifest.xml:76:13
+	android:name
+		ADDED from AndroidManifest.xml:74:13
 activity#com.glitterlabs.caixia.MyFriendsActivity
-ADDED from AndroidManifest.xml:79:9
+ADDED from AndroidManifest.xml:78:9
 	android:label
-		ADDED from AndroidManifest.xml:81:13
-	android:theme
-		ADDED from AndroidManifest.xml:82:13
-	android:name
 		ADDED from AndroidManifest.xml:80:13
+	android:theme
+		ADDED from AndroidManifest.xml:81:13
+	android:name
+		ADDED from AndroidManifest.xml:79:13
 activity#com.glitterlabs.caixia.UserProfileActivity
-ADDED from AndroidManifest.xml:84:9
+ADDED from AndroidManifest.xml:83:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:87:13
-	android:label
 		ADDED from AndroidManifest.xml:86:13
-	android:theme
-		ADDED from AndroidManifest.xml:88:13
-	android:name
+	android:label
 		ADDED from AndroidManifest.xml:85:13
+	android:theme
+		ADDED from AndroidManifest.xml:87:13
+	android:name
+		ADDED from AndroidManifest.xml:84:13
 activity#com.glitterlabs.caixia.PreviewPhotoActivity
-ADDED from AndroidManifest.xml:90:9
+ADDED from AndroidManifest.xml:89:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:93:13
-	android:label
 		ADDED from AndroidManifest.xml:92:13
-	android:theme
-		ADDED from AndroidManifest.xml:94:13
-	android:name
-		ADDED from AndroidManifest.xml:91:13
-activity#com.glitterlabs.caixia.FeedBackActivity
-ADDED from AndroidManifest.xml:96:9
 	android:label
-		ADDED from AndroidManifest.xml:98:13
+		ADDED from AndroidManifest.xml:91:13
 	android:theme
-		ADDED from AndroidManifest.xml:99:13
+		ADDED from AndroidManifest.xml:93:13
 	android:name
+		ADDED from AndroidManifest.xml:90:13
+activity#com.glitterlabs.caixia.FeedBackActivity
+ADDED from AndroidManifest.xml:95:9
+	android:label
 		ADDED from AndroidManifest.xml:97:13
+	android:theme
+		ADDED from AndroidManifest.xml:98:13
+	android:name
+		ADDED from AndroidManifest.xml:96:13
 service#com.parse.PushService
-ADDED from AndroidManifest.xml:102:9
+ADDED from AndroidManifest.xml:101:9
 	android:name
-		ADDED from AndroidManifest.xml:102:18
+		ADDED from AndroidManifest.xml:101:18
 receiver#com.parse.ParseBroadcastReceiver
-ADDED from AndroidManifest.xml:104:9
+ADDED from AndroidManifest.xml:103:9
 	android:name
-		ADDED from AndroidManifest.xml:104:19
+		ADDED from AndroidManifest.xml:103:19
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT
-ADDED from AndroidManifest.xml:105:13
+ADDED from AndroidManifest.xml:104:13
 action#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:105:17
+	android:name
+		ADDED from AndroidManifest.xml:105:25
+action#android.intent.action.USER_PRESENT
 ADDED from AndroidManifest.xml:106:17
 	android:name
 		ADDED from AndroidManifest.xml:106:25
-action#android.intent.action.USER_PRESENT
-ADDED from AndroidManifest.xml:107:17
-	android:name
-		ADDED from AndroidManifest.xml:107:25
 receiver#com.parse.GcmBroadcastReceiver
-ADDED from AndroidManifest.xml:110:9
+ADDED from AndroidManifest.xml:109:9
 	android:permission
-		ADDED from AndroidManifest.xml:112:13
-	android:name
 		ADDED from AndroidManifest.xml:111:13
+	android:name
+		ADDED from AndroidManifest.xml:110:13
 intent-filter#com.glitterlabs.caixia+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from AndroidManifest.xml:113:13
+ADDED from AndroidManifest.xml:112:13
 action#com.google.android.c2dm.intent.RECEIVE
+ADDED from AndroidManifest.xml:113:17
+	android:name
+		ADDED from AndroidManifest.xml:113:25
+action#com.google.android.c2dm.intent.REGISTRATION
 ADDED from AndroidManifest.xml:114:17
 	android:name
 		ADDED from AndroidManifest.xml:114:25
-action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from AndroidManifest.xml:115:17
-	android:name
-		ADDED from AndroidManifest.xml:115:25
 category#com.glitterlabs.caixia
-ADDED from AndroidManifest.xml:122:17
+ADDED from AndroidManifest.xml:121:17
 	android:name
-		ADDED from AndroidManifest.xml:122:27
+		ADDED from AndroidManifest.xml:121:27
+activity#com.glitterlabs.caixia.MyFriendsListActivity
+ADDED from AndroidManifest.xml:125:9
+	android:label
+		ADDED from AndroidManifest.xml:128:13
+	android:theme
+		ADDED from AndroidManifest.xml:127:13
+	android:name
+		ADDED from AndroidManifest.xml:126:13

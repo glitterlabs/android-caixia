@@ -47,6 +47,19 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
 
+    <ImageView
+        android:id="@+id/ivCancelPreviewEvent"
+        android:layout_width="@dimen/pad_50dp"
+        android:layout_height="@dimen/pad_50dp"
+        android:layout_gravity="left|center_vertical"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/ic_cancel_photo"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_alignTop="@+id/tvTimer_PreviewPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>
 <!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/activity_preview_photo.xml -->

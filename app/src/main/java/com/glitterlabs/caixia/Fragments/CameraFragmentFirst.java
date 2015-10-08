@@ -28,12 +28,12 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.glitterlabs.caixia.util.GeoPointParse;
 import com.glitterlabs.caixia.Adapters.TimerAdapter;
 import com.glitterlabs.caixia.Models.MessageData;
 import com.glitterlabs.caixia.MyFriendsActivity;
 import com.glitterlabs.caixia.R;
 import com.glitterlabs.caixia.util.GPSTracker;
+import com.glitterlabs.caixia.util.GeoPointParse;
 import com.glitterlabs.caixia.util.Helper;
 
 import java.io.File;
@@ -157,9 +157,11 @@ public class CameraFragmentFirst extends Fragment {
                     public void onClick(View v) {
                         // get an image from the camera
                         mCamera.takePicture(null, null, mPicture);
+
+
+
                     }
-                }
-        );
+                });
 
         ivCancelPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -304,6 +306,9 @@ public class CameraFragmentFirst extends Fragment {
                               int dayOfMonth) {
             String scheduldDate = String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1)
                     + "-" + String.valueOf(year);
+
+
+
             messageData.setScheduldDate(scheduldDate);
             Toast.makeText(getActivity(), String.valueOf(dayOfMonth) + "-" + String.valueOf(monthOfYear + 1)
                     + "-" + String.valueOf(year), Toast.LENGTH_LONG).show();
@@ -449,6 +454,8 @@ public class CameraFragmentFirst extends Fragment {
         Helper.showDialog("Success!", "Your picture has been saved!", getActivity());
         return mediaFile;
     }
+
+
 
     /**
      * Surface on which the camera projects it's capture results. This is derived both from Google's docs and the

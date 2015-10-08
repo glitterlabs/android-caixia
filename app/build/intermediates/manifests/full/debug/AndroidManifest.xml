@@ -121,6 +121,12 @@
                 <category android:name="com.glitterlabs.caixia" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.glitterlabs.caixia.MyFriendsListActivity"
+            android:label="@string/title_activity_my_friends_list"
+            android:theme="@style/MyCustomToolBarTheme" >
+        </activity>
     </application>
 
 </manifest>

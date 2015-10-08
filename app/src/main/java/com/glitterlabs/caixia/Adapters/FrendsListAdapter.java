@@ -18,14 +18,14 @@ import java.util.ArrayList;
 /**
  * Created by mohinish on 8/23/15.
  */
-public class MyFrendsListAdapter extends BaseAdapter {
+public class FrendsListAdapter extends BaseAdapter {
 
     private Context mContext;
     private ArrayList<Friend> mlist = new ArrayList<Friend>();
     public ArrayList<String> checkedFrends = new ArrayList<String>();
+    private int mPosition;
 
-
-    public MyFrendsListAdapter(Context context, ArrayList allFrends) {
+    public FrendsListAdapter(Context context, ArrayList allFrends) {
 
         this.mContext = context;
         this.mlist = allFrends;
@@ -48,18 +48,19 @@ public class MyFrendsListAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView( int position, View convertView, ViewGroup parent) {
+        mPosition=position;
 
-
-        convertView = LayoutInflater.from(mContext).inflate(R.layout.my_friends_list_item, null);
+        convertView = LayoutInflater.from(mContext).inflate(R.layout.friends_list_item, null);
         TextView tvName = (TextView) convertView.findViewById(R.id.tvMyFriendName_listItem);
         tvName.setText(mlist.get(position).getFriendName());
         CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.cbMyFriendName_listItem);
+
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    checkedFrends.add(position, mlist.get(position).getUserID());
+                    checkedFrends.add(mlist.get(mPosition).getUserID());
                 }
             }
         });

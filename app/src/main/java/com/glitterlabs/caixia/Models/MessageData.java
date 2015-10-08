@@ -15,6 +15,7 @@ public class MessageData implements Serializable {
     public ParseGeoPoint geoPoint;
     public byte[] byteImage;
 
+
     public String getUserId() {
         return userId;
     }
@@ -62,4 +63,6 @@ public class MessageData implements Serializable {
     public void setByteImage(byte[] byteImage) {
         this.byteImage = byteImage;
     }
+
+
 }

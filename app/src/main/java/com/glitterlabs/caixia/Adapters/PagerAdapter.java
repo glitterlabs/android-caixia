@@ -34,6 +34,8 @@ public class PagerAdapter  extends FragmentPagerAdapter {
                 return CameraFragmentFirst.newInstance(position);
             case 1: // Fragment # 0 - This will show SecondFragment
                 return InboxFragment.newInstance(position);
+            /*case 2: // Fragment # 0 - This will show SecondFragment
+                return CameraFragmentFirst.newInstance(position);*/
 
 
             default:

@@ -12,6 +12,8 @@ public class InboxList {
     public  String itemId;
     public Bitmap bitmap;
     public String currentTime;
+    public int status;
+
 
     public String getSenderName() {
         return senderName;
@@ -51,5 +53,13 @@ public class InboxList {
 
     public void setCurrentTime(String currentTime) {
         this.currentTime = currentTime;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

@@ -37,6 +37,8 @@ private  EditText etfeedback;
 private  void sendFeedback(){
     String feedbackMessage= etfeedback.getText().toString();
     ParseObject feedback= new ParseObject("Feedback");
+    feedback.put("userId", ParseUser.getCurrentUser().getObjectId());
+    feedback.put("userName", ParseUser.getCurrentUser().get("username"));
     feedback.put("senderName", ParseUser.getCurrentUser().get("Name"));
     feedback.put("feedbackMessage", feedbackMessage);
     feedback.saveInBackground(new SaveCallback() {

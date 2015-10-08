@@ -53,7 +53,7 @@ public class UserProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tvMyFriends.setOnTouchListener(new CustomTouchListener());
-                startActivity(new Intent(UserProfileActivity.this, MyFriendsActivity.class));
+                startActivity(new Intent(UserProfileActivity.this, MyFriendsListActivity.class));
             }
         });
     }
@@ -99,7 +99,7 @@ public class UserProfileActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_logout) {
             showLogoutDilog("Logout", "Do you want to logout?",this);
         }
         if (id == android.R.id.home) {

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.glitterlabs.caixia.MyFriendsListActivity">
+    <item android:id="@+id/addFriend"
+          android:title="@string/action_add_fiends"
+          android:orderInCategory="100"
+          android:icon="@drawable/ic_add_friend"
+          app:showAsAction="always"/>
+</menu>
+<!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/menu/menu_my_friends_list.xml -->

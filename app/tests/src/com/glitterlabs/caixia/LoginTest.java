@@ -20,17 +20,19 @@ import android.test.ActivityInstrumentationTestCase2;
 /**
  * Unit tests for CardView samples.
  */
-public class SampleTests extends ActivityInstrumentationTestCase2<LoginActivity> {
+public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 
 
 
-    public SampleTests() {
+    public LoginTest() {
         super(LoginActivity.class);
     }
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+        LoginActivity loginActivity = getActivity();
+        loginActivity.login();
 
     }
 

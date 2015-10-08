@@ -33,7 +33,7 @@
         android:id="@+id/tvUsername_UserProfile"
         android:textColor="@color/primaryColor"
         android:layout_gravity="center_horizontal"/>
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -43,16 +43,17 @@
         android:drawableLeft="@drawable/ic_user"
         android:layout_marginTop="@dimen/pad_40dp"
         android:textColor="@color/white"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"/>-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Add Friends"
         android:textSize="@dimen/txt_36sp"
+
         android:id="@+id/tvAddFriends_UserProfile"
         android:drawableLeft="@drawable/ic_add_friend"
-        android:layout_marginTop="@dimen/pad_10dp"
+        android:layout_marginTop="@dimen/pad_50dp"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"/>
     <TextView

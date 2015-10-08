@@ -1,129 +1,136 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/bg"
-              tools:context="com.glitterlabs.com.Activities.LoginActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:gravity="center"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    android:background="@color/Transparent_50_black">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-
-        android:text="CAIXIA"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="@dimen/pad_65dp"
-        />
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg"
+                tools:context="com.glitterlabs.com.Activities.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
-android:layout_marginTop="50dp"
-        android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/etUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edit_text_style"
-            android:ems="10"
-            android:hint="User Name"
-
-            android:textColor="@color/white"
-            android:inputType="textPersonName"
-            android:drawableLeft="@drawable/ic_username"
-            android:drawablePadding="@dimen/pad_10dp"
-            android:padding="10dp"
-
-            android:textColorHint="@color/background_floating_material_light">
-        <requestFocus />
-        </EditText>
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/edit_text_style"
-            android:textColor="@color/white"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:drawableLeft="@drawable/ic_pwd"
-            android:drawablePadding="@dimen/pad_10dp"
-            android:padding="10dp"
-            android:textColorHint="@color/background_floating_material_light">
-        <requestFocus />
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@color/Transparent_50_black"
+        android:gravity="center"
         android:orientation="vertical"
-android:layout_marginTop="@dimen/pad_15dp"
-    >
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
 
-            android:background="@drawable/button_selector"
-            android:text="Login"
+            android:text="CAIXIA"
             android:textColor="@color/white"
+            android:textSize="@dimen/pad_65dp"
+            android:textStyle="bold"
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_style"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="@dimen/pad_10dp"
+
+                android:ems="10"
+                android:hint="User Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/white"
+
+                android:textColorHint="@color/background_floating_material_light">
+
+                <requestFocus/>
+            </EditText>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_style"
+                android:drawableLeft="@drawable/ic_pwd"
+                android:drawablePadding="@dimen/pad_10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/background_floating_material_light">
+
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_15dp"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/button_selector"
+                android:text="Login"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
-    <TextView
-        android:id="@+id/tvForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Forgot password ?"
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:id="@+id/tvSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Forgot password ?"
 
-        android:gravity="center"
+            android:textColor="@color/CornflowerBlue"
+            android:textSize="20sp"
+            />
 
-        android:text="Create an acount"
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:textColor="@color/CornflowerBlue"
-        android:textSize="20sp"
-        />
+            android:gravity="center"
+
+            android:text="Create an acount"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+            />
     </LinearLayout>
 </RelativeLayout>
 <!-- From: file:/Users/mohinish/Desktop/ParsePushExample/app/src/main/res/layout/activity_login.xml -->

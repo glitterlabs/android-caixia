@@ -70,7 +70,9 @@ public class MessageDisplayActivity extends AppCompatActivity {
 
                     public void done(ParseObject object,
                                      ParseException e) {
-
+                        // now chang photo seen status
+                        object.put("isSeen", 1);
+                        object.saveInBackground();
                         final String text = object.getString("text");
                         final int startTime = (int) object.getNumber("timeToDisplayImage");
                         // Locate the column named "ImageName" and set
@@ -107,9 +109,8 @@ public class MessageDisplayActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
-                       
-                        object.put("isSeen", true);
-                        object.saveInBackground();
+
+
                     }
                 });
 
@@ -129,11 +130,7 @@ public class MessageDisplayActivity extends AppCompatActivity {
         ivPhoto.setImageBitmap(rotatedBMP);
     }
 
-    private void upldateSeenStatus() {
-        ParseObject inbox = new ParseObject("Inbox");
-        inbox.put("isSeen", true);
-        inbox.saveInBackground();
-    }
+
 
     public void timerEvent(int startTime) {
         tvTimer.setVisibility(View.VISIBLE);

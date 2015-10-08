@@ -22,11 +22,12 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class PreviewPhotoActivity extends AppCompatActivity {
     private ProgressBar bar;
-    private ImageView ivPhoto;
+    private ImageView ivPhoto, ivCancelPreview;
     private TextView tvText, tvTimer;
     private ProgressDialog progressDialog;
     // for count down timer
@@ -34,8 +35,10 @@ public class PreviewPhotoActivity extends AppCompatActivity {
     private boolean timerHasStarted = true;
 
     private final long interval = 1 * 1000;
-    String text;
+    String text, scheduldate;
     int startTime;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,26 +50,39 @@ public class PreviewPhotoActivity extends AppCompatActivity {
         bar = (ProgressBar) findViewById(R.id.ProgressBar_PreviewPhoto);
         tvTimer = (TextView) this.findViewById(R.id.tvTimer_PreviewPhoto);
         tvTimer.setVisibility(View.GONE);
+        ivCancelPreview= (ImageView) findViewById(R.id.ivCancelPreviewEvent);
+        ivCancelPreview.setVisibility(View.GONE);
+        ivCancelPreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();   // to stop preview event
+            }
+        });
         loadingPhoto();
     }
 
     public void loadingPhoto() {
+        long date = System.currentTimeMillis();
 
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
 
         final ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
                 "Inbox");
 
         query.whereEqualTo("userId", ParseUser.getCurrentUser().getObjectId());
         query.whereExists("image");
+       // query.whereEqualTo("createdAt",sdf.format(date));
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, ParseException e) {
                 for (int i = 0; i < list.size(); i++) {
-
+                    scheduldate= list.get(i).getString("scheduledDate");
                     text = list.get(i).getString("text");
                     startTime = (int) list.get(i).getNumber("timeToDisplayImage");
                     // Locate the column named "ImageName" and set
                     // the string
+
+
                     ParseFile fileObject = (ParseFile) list.get(i)
                             .get("image");
                     fileObject
@@ -86,7 +102,7 @@ public class PreviewPhotoActivity extends AppCompatActivity {
                                                         data.length);
 
                                         imageRotate(bmp);
-
+                                        ivCancelPreview.setVisibility(View.VISIBLE);
                                         tvText.setVisibility(View.VISIBLE);
                                         tvText.setText(text);
                                         // Close progress dialog
@@ -101,6 +117,7 @@ public class PreviewPhotoActivity extends AppCompatActivity {
                             });
                     tvText.setVisibility(View.GONE);
                     tvTimer.setVisibility(View.GONE);
+
                 }
 
             }
