@@ -1,20 +1,26 @@
 package com.glitterlabs.caixia.Models;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import com.parse.ParseGeoPoint;
 
+import java.io.File;
 import java.io.Serializable;
 
-/**
- * Created by mohinish on 8/28/15.
- */
+
 public class MessageData implements Serializable {
+
     public String textMessage;
     public String userId;
     public int timeForDisplay;
     public String scheduldDate;
     public ParseGeoPoint geoPoint;
     public byte[] byteImage;
-
+    public File imageFile;
 
     public String getUserId() {
         return userId;
@@ -64,5 +70,9 @@ public class MessageData implements Serializable {
         this.byteImage = byteImage;
     }
 
+    public File getImageFile() { return imageFile; }
 
+    public void setImageFile(File imageFile) {
+        this.imageFile = imageFile;
+    }
 }

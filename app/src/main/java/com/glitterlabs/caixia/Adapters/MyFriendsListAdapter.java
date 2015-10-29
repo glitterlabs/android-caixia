@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.Adapters;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,9 +26,7 @@ import com.glitterlabs.caixia.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by mohinish on 9/30/15.
- */
+
 public class MyFriendsListAdapter extends BaseAdapter {
 
     private Context mContext;

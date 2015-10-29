@@ -36,6 +36,7 @@ public class MyFriendsActivity extends AppCompatActivity {
     MessageData messageData;
     ProgressDialog progressDialog;
     ArrayList<Friend> mlist;
+    String tag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class MyFriendsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         messageData = (MessageData) getIntent().getSerializableExtra("messageData");
-
+        tag= getIntent().getStringExtra("tag");
         lvFriends = (ListView) findViewById(R.id.lvMyFrendList);
         mAdapter = new FrendsListAdapter(this, getAllFrends());
         lvFriends.setAdapter(mAdapter);
@@ -74,7 +75,10 @@ public class MyFriendsActivity extends AppCompatActivity {
             progressDialog = ProgressDialog.show(MyFriendsActivity.this, null,
                     getString(R.string.alert_wait));
             for (int i = 0; i < list.size(); i++) {
-                ParseFile parseImgeFile = new ParseFile("image.png", messageData.getByteImage());
+
+                //ParseFile parseImgeFile = new ParseFile("image", messageData.getByteImage());
+                ParseFile parseImgeFile = new  ParseFile(messageData.getImageFile(),tag);
+              //  ParseFile parseImgeFile = new ParseFile(File file,"png")
                 // Upload the image into Parse Cloud
                 parseImgeFile.saveInBackground();
                 ParseObject inbox = new ParseObject("Inbox");
@@ -83,9 +87,9 @@ public class MyFriendsActivity extends AppCompatActivity {
                 inbox.put("text", messageData.getTextMessage());
                 inbox.put("timeToDisplayImage", messageData.getTimeForDisplay());
                 inbox.put("scheduledDate", messageData.getScheduldDate());
-
                 inbox.put("location", messageData.getGeoPoint());
                 inbox.put("image", parseImgeFile);
+                inbox.put("imageType",tag );
                 inbox.put("isSeen",0);
                 inbox.saveInBackground(new SaveCallback() {
 
@@ -114,7 +118,7 @@ public class MyFriendsActivity extends AppCompatActivity {
         mlist = new ArrayList<Friend>();
         if (cursor.getCount() == 0) {
             // no data found
-            Toast.makeText(MyFriendsActivity.this, "No frend is added, add your friend and try again.",
+            Toast.makeText(MyFriendsActivity.this, "Friend Not Found",
                     Toast.LENGTH_LONG).show();
             return mlist;
         } else {

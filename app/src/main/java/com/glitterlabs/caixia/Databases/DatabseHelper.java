@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.Databases;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,15 +12,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/*
-    Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
-    All rights reserved. Patents pending.
-    Responsible: Abhay Bhusari
- */
+
 public class DatabseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "myfriends.db";
-    private static final String TABLE_NAME = "myfriends_table";
+    private static final String DATABASE_NAME = "myfriends.db"; //caixia.db
+    private static final String TABLE_NAME = "myfriends_table"; // caixia_friends_table
     private static final String ID = "ID";
     private static final String NAME = "NAME";
     private static final String USER_NAME = "USER_NAME";

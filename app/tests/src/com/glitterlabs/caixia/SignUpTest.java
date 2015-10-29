@@ -1,10 +1,16 @@
 package com.glitterlabs.caixia;
 
-import android.test.ActivityInstrumentationTestCase2;
 
 /**
- * Created by mohinish on 9/24/15.
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
  */
+
+import android.test.ActivityInstrumentationTestCase2;
+
+
 public class SignUpTest extends ActivityInstrumentationTestCase2<SignUpActivity> {
 
 

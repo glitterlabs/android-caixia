@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.Fragments;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -38,9 +44,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by mohinish on 10/7/15.
- */
+
 public class CameraFragmentTwo extends Fragment {
     // Native camera.
     private Camera mCamera;

@@ -6,12 +6,11 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -39,10 +38,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/MyTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,31 +54,37 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
             android:name=".MessageDisplayActivity"
             android:label="@string/title_activity_message_display"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Base" >
         </activity>
         <activity
             android:name=".AddFriendAvtivity"
             android:label="@string/title_activity_add_friend"
+            android:screenOrientation="portrait"
             android:theme="@style/MyCustomToolBarTheme" >
         </activity>
         <activity
             android:name=".MyFriendsActivity"
             android:label="@string/title_activity_my_friends"
+            android:screenOrientation="portrait"
             android:theme="@style/MyCustomToolBarTheme" >
         </activity>
         <activity
@@ -95,6 +102,7 @@
         <activity
             android:name=".FeedBackActivity"
             android:label="@string/title_activity_feed_back"
+            android:screenOrientation="portrait"
             android:theme="@style/MyCustomToolBarTheme" >
         </activity>
 
@@ -124,8 +132,25 @@
 
         <activity
             android:name=".MyFriendsListActivity"
+            android:label="@string/title_activity_my_friends_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomToolBarTheme" >
+        </activity>
+        <activity
+            android:name="nl.changer.polypicker.ImagePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyNoActionBar" />
+        <activity
+            android:name=".GIFPreviewActivity"
+            android:label="@string/title_activity_gif_preview"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Base" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
             android:theme="@style/MyCustomToolBarTheme"
-            android:label="@string/title_activity_my_friends_list" >
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_about" >
         </activity>
     </application>
 

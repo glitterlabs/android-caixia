@@ -1,8 +1,12 @@
 package com.glitterlabs.caixia.Models;
 
 /**
- * Created by mohinish on 8/21/15.
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
  */
+
 public class Friend {
     public  String friendName;
     public String userName;

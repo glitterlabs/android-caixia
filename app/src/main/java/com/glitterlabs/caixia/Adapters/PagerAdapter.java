@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.Adapters;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,12 +14,6 @@ import com.glitterlabs.caixia.Fragments.CameraFragmentFirst;
 import com.glitterlabs.caixia.Fragments.InboxFragment;
 
 
-/*
-    Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
-    All rights reserved. Patents pending.
-
-    Responsible: Abhay Bhusari
- */
 public class PagerAdapter  extends FragmentPagerAdapter {
     final int PAGE_COUNT = 2;
     private String tabTitles[] = new String[] { "Tab1", "Tab2", "Tab3" };
@@ -34,8 +34,6 @@ public class PagerAdapter  extends FragmentPagerAdapter {
                 return CameraFragmentFirst.newInstance(position);
             case 1: // Fragment # 0 - This will show SecondFragment
                 return InboxFragment.newInstance(position);
-            /*case 2: // Fragment # 0 - This will show SecondFragment
-                return CameraFragmentFirst.newInstance(position);*/
 
 
             default:

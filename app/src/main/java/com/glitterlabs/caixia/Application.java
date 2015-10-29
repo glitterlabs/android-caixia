@@ -1,9 +1,14 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseUser;
-import com.parse.PushService;
 
 public class Application extends android.app.Application {
 
@@ -22,7 +27,7 @@ public class Application extends android.app.Application {
       Parse.initialize(this, PARSE_APPLICATION_ID, PARSE_CLIENT_KEY);
 
       // Specify an Activity to handle all pushes by default.
-      PushService.setDefaultPushCallback(this, MainActivity.class);
+      //PushService.setDefaultPushCallback(this, MainActivity.class);
 
       //ParseInstallation.getCurrentInstallation().saveInBackground();
      ParseUser.enableAutomaticUser();

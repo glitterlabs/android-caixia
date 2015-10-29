@@ -37,11 +37,40 @@ android {
 
         }
 }
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // and
+    // your
+    // other
+    // dependencies...
+    compile files('libs/Parse-1.10.3.jar')
+}
 
+// add external respository url in addition to having
+// your preferred repository.
+repositories {
+    // for downloading polypicker dependency cwac-camera
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+
+    // for downloading poly-picker now we are using jitpack.
+    // Goodbye Maven Central
+    maven {
+        url "https://jitpack.io"
+    }
+}
 dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile files('libs/Parse-1.4.3.jar')
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
     compile 'com.parse.bolts:bolts-android:1.+'
     compile 'com.makeramen:roundedimageview:2.2.0'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile project(':lib')
+    //to capture multiple photos by camera
+    compile 'com.github.jaydeepw:poly-picker:v1.0.22'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
 }

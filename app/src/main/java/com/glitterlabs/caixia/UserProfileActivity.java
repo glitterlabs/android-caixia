@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,30 +23,24 @@ import com.makeramen.roundedimageview.RoundedImageView;
 import com.parse.ParseUser;
 
 public class UserProfileActivity extends AppCompatActivity {
-   private RoundedImageView ivProfilePhoto;
-    private TextView tvName,tvUserName,tvAddedMe,tvAddFriends,tvMyFriends;
+    private RoundedImageView ivProfilePhoto;
+    private TextView tvName, tvUserName, tvAddedMe, tvAddFriends, tvMyFriends;
 
-    @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        /*ivProfilePhoto= (RoundedImageView) findViewById(R.id.ivUserProfilePhoto);
 
-        ivProfilePhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Animation animZoomin = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.image_animation);
 
-                ivProfilePhoto.startAnimation(animZoomin);
-            }
-        });*/
+
         tvName = (TextView) findViewById(R.id.tvName_UserProfile);
         tvName.setText(ParseUser.getCurrentUser().getString("Name"));
-        tvUserName= (TextView) findViewById(R.id.tvUsername_UserProfile);
+        tvUserName = (TextView) findViewById(R.id.tvUsername_UserProfile);
         tvUserName.setText(ParseUser.getCurrentUser().getString("username"));
-        tvAddFriends= (TextView) findViewById(R.id.tvAddFriends_UserProfile);
+        tvAddFriends = (TextView) findViewById(R.id.tvAddFriends_UserProfile);
         tvAddFriends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class UserProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(UserProfileActivity.this, AddFriendAvtivity.class));
             }
         });
-        tvMyFriends= (TextView) findViewById(R.id.tvMyFriends_UserProfile);
+        tvMyFriends = (TextView) findViewById(R.id.tvMyFriends_UserProfile);
         tvMyFriends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,15 +57,6 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_user_profile, menu);
-        return true;
-    }
-
-
 
 
     public void showLogoutDilog(String title, String message, Context context) {
@@ -91,6 +82,14 @@ public class UserProfileActivity extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_user_profile, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -100,12 +99,14 @@ public class UserProfileActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
+
             showLogoutDilog("Logout", "Do you want to logout?",this);
+
         }
         if (id == android.R.id.home) {
             finish();
         }
-        if(id== R.id.action_Share){
+        if (id == R.id.action_Share) {
             String shareBody = "https://play.google.com/store/apps/details?id=com.glitterlabs.caixia";
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
@@ -113,9 +114,15 @@ public class UserProfileActivity extends AppCompatActivity {
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
         }
-        if(id== R.id.action_feedback){
-           startActivity(new Intent(UserProfileActivity.this,FeedBackActivity.class));
+        if (id == R.id.action_feedback) {
+            startActivity(new Intent(UserProfileActivity.this, FeedBackActivity.class));
+        }
+        if(id==R.id.action_About){
+            startActivity(new Intent(UserProfileActivity.this, AboutActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

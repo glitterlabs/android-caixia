@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.util;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.AlertDialog;
 import android.app.Service;
@@ -22,11 +28,10 @@ import com.parse.ParsePush;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-/*Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
-        All rights reserved. Patents pending.
-        Responsible: Abhay Bhusari
-        */
-//refrence link http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/
+
+/**
+ * Add documentation for this class.
+ */
 public class GPSTracker extends Service implements LocationListener {
 
     private final Context mContext;

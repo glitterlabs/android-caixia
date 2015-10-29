@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
@@ -14,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.parse.FindCallback;
 import com.parse.GetDataCallback;
 import com.parse.ParseException;
@@ -22,6 +29,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -71,60 +79,81 @@ public class PreviewPhotoActivity extends AppCompatActivity {
 
         query.whereEqualTo("userId", ParseUser.getCurrentUser().getObjectId());
         query.whereExists("image");
+
        // query.whereEqualTo("createdAt",sdf.format(date));
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, ParseException e) {
                 for (int i = 0; i < list.size(); i++) {
-                    scheduldate= list.get(i).getString("scheduledDate");
+                    scheduldate = list.get(i).getString("scheduledDate");
                     text = list.get(i).getString("text");
                     startTime = (int) list.get(i).getNumber("timeToDisplayImage");
                     // Locate the column named "ImageName" and set
                     // the string
+                    String imageType = list.get(i).getString("imageType");
 
 
                     ParseFile fileObject = (ParseFile) list.get(i)
                             .get("image");
-                    fileObject
-                            .getDataInBackground(new GetDataCallback() {
+                    if (imageType.equals("gif")) {
+                        try {
+                            File imageFile = fileObject.getFile();
+                            loadGif(startTime, imageFile);
+                        } catch (ParseException e1) {
+                            e1.printStackTrace();
+                        }
+                    } else {
+                        fileObject
+                                .getDataInBackground(new GetDataCallback() {
 
-                                public void done(byte[] data,
-                                                 ParseException e) {
-                                    if (e == null) {
-                                        Log.d("test",
-                                                "We've got data in data.");
-                                        // Decode the Byte[] into
-                                        // Bitmap
+                                    public void done(byte[] data,
+                                                     ParseException e) {
+                                        if (e == null) {
+                                            Log.d("test",
+                                                    "We've got data in data.");
+                                            // Decode the Byte[] into
+                                            // Bitmap
 
-                                        Bitmap bmp = BitmapFactory
-                                                .decodeByteArray(
-                                                        data, 0,
-                                                        data.length);
+                                            Bitmap bmp = BitmapFactory
+                                                    .decodeByteArray(
+                                                            data, 0,
+                                                            data.length);
 
-                                        imageRotate(bmp);
-                                        ivCancelPreview.setVisibility(View.VISIBLE);
-                                        tvText.setVisibility(View.VISIBLE);
-                                        tvText.setText(text);
-                                        // Close progress dialog
-                                        bar.setVisibility(View.GONE);
-                                        timerEvent(startTime);
+                                            imageRotate(bmp);
+                                            ivCancelPreview.setVisibility(View.VISIBLE);
+                                            tvText.setVisibility(View.VISIBLE);
+                                            tvText.setText(text);
+                                            // Close progress dialog
+                                            bar.setVisibility(View.GONE);
+                                            timerEvent(startTime);
 
-                                    } else {
-                                        Log.d("test",
-                                                "There was a problem downloading the data.");
+                                        } else {
+                                            Log.d("test",
+                                                    "There was a problem downloading the data.");
+                                        }
                                     }
-                                }
-                            });
-                    tvText.setVisibility(View.GONE);
-                    tvTimer.setVisibility(View.GONE);
+                                });
+                        tvText.setVisibility(View.GONE);
+                        tvTimer.setVisibility(View.GONE);
 
+                    }
                 }
 
             }
         });
 
     }
+    public void loadGif(int startTime,File gifFile ){
 
+
+        try {
+            Glide.with(PreviewPhotoActivity.this).load(gifFile).asGif().into(ivPhoto);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        bar.setVisibility(View.GONE);
+        timerEvent(startTime);
+    }
     public void imageRotate(Bitmap bmp) {
 // Getting width & height of the given image.
         int w = bmp.getWidth();

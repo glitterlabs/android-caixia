@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,12 +24,7 @@ import com.parse.ParseException;
 import com.parse.ParseInstallation;
 import com.parse.ParseUser;
 
-/*
-    Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
-    All rights reserved. Patents pending.
 
-    Responsible: Abhay Bhusari
- */
 public class LoginActivity extends AppCompatActivity {
 
     private Button btnLogin;
@@ -33,11 +34,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-
         etEmailId = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -119,31 +118,7 @@ public void saveInstallationState(String currentUserId){
             }
         });
     }
- /*   public String GCMRegistrationId(){
-        // Get GCM registration id
 
-        String regId = GCMRegistrar.getRegistrationId(this);
-        // Check if regid already presents
-        if (regId.equals("")) {
-            // Register with GCM
-            GCMRegistrar.register(this, GOOGLE_SENDER_ID);
-        } else {
-            // Device is already registered on GCM Server
-            if (GCMRegistrar.isRegisteredOnServer(this)) {
-                // Skips registration.
-                Toast.makeText(getApplicationContext(), "Already registered with GCM Server", Toast.LENGTH_LONG).show();
-
-            } else {
-
-                // Try to register again, but not in the UI thread.
-                // It's also necessary to cancel the thread onDestroy(),
-                // hence the use of AsyncTask instead of a raw thread.
-
-
-            }
-        }
-        return regId;
-    }*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

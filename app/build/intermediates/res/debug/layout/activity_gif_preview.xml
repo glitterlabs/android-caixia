@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lighter_gray"
+                tools:context="com.glitterlabs.caixia.GIFPreviewActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/pad_20dp"
+        android:id="@+id/ivGif_Preview"
+        android:layout_above="@+id/rlGif_PhotoSetting"
+        android:src="@drawable/previewlogo"
+        />
+    <EditText
+android:id="@+id/etGif_TextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:hint="write some text here"
+        android:background="@color/Transparent_50_black"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="@dimen/pad_5dp"
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:layout_alignBottom="@+id/ivGif_Preview"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rlGif_PhotoSetting"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pad_70dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/Transparent_50_black"
+        >
+
+        <ImageView
+            android:id="@+id/ivGif_Text"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+
+            android:src="@drawable/ic_text"/>
+
+        <ImageView
+            android:id="@+id/ivGif_Time"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+
+            android:layout_toRightOf="@+id/ivGif_Text"
+            android:src="@drawable/ic_time"/>
+
+
+        <ImageView
+            android:id="@+id/ivGif_DatePicker"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_toRightOf="@+id/ivGif_Time"
+            android:src="@drawable/ic_date"/>
+
+        <ImageView
+            android:id="@+id/ivGif_GPS"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_toRightOf="@+id/ivGif_DatePicker"
+
+            android:src="@drawable/ic_gps"/>
+
+
+
+        <ImageView
+            android:id="@+id/ivGif_Send"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/pad_10dp"
+
+            android:src="@drawable/ic_send"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+<!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/layout/activity_gif_preview.xml -->

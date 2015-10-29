@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -18,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_maintwo);
-
-		// Track app opens.
+        // Track app opens.
 		ParseAnalytics.trackAppOpened(getIntent());
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -31,10 +36,17 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	public void onStart() {
 		super.onStart();
-		
-
 	}
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     public void saveUserProfile(){
 

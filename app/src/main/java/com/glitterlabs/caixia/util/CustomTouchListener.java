@@ -1,11 +1,18 @@
 package com.glitterlabs.caixia.util;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+
 /**
- * Created by mohinish on 9/11/15.
+ * docs ?
  */
 public class CustomTouchListener implements View.OnTouchListener {
     public boolean onTouch(View view, MotionEvent motionEvent) {

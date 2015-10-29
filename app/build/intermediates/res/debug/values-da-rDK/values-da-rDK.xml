@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/mohinish/Desktop/Caixia/app/build/intermediates/exploded-aar/com.github.jaydeepw/poly-picker/v1.0.22/res/values-da-rDK/values-da-rDK.xml -->
+    <eat-comment/>
+    <string name="cancel">Fortryd</string>
+    <string name="done">Færdig</string>
+    <string name="gallery">Galleri</string>
+    <string name="imageview_capture_photo_content_description">Tag et foto med kameraet</string>
+    <string name="imageview_content_description">Galleri billed</string>
+    <string name="n_images_selected">%1$s billeder allerede valgt</string>
+    <string name="no_images_selected">Ingen billeder valgt</string>
+    <string name="photo_save_error_toast">Kunne ikke gemme billede.</string>
+    <string name="progress_title">Arbejder...</string>
+    <string name="take_photo">Tag et billede</string>
+</resources>

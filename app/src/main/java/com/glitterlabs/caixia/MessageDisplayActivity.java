@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,12 +23,15 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.parse.GetCallback;
 import com.parse.GetDataCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+
+import java.io.File;
 
 
 public class MessageDisplayActivity extends AppCompatActivity {
@@ -36,7 +45,7 @@ public class MessageDisplayActivity extends AppCompatActivity {
     private boolean timerHasStarted = true;
 
     private final long interval = 1 * 1000;
-
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,43 +88,65 @@ public class MessageDisplayActivity extends AppCompatActivity {
                         // the string
                         ParseFile fileObject = (ParseFile) object
                                 .get("image");
-                        fileObject
-                                .getDataInBackground(new GetDataCallback() {
+                        String imagetype = object.getString("imageType");
+                        if (imagetype.equals("gif")) {
+                            try {
+                                File imageFile = fileObject.getFile();
+                                loadGif(startTime,imageFile);
+                            } catch (ParseException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
+                        else{
+                            fileObject
+                                    .getDataInBackground(new GetDataCallback() {
 
-                                    public void done(byte[] data,
-                                                     ParseException e) {
-                                        if (e == null) {
-                                            Log.d("test",
-                                                    "We've got data in data.");
-                                            // Decode the Byte[] into
-                                            // Bitmap
+                                        public void done(byte[] data,
+                                                         ParseException e) {
+                                            if (e == null) {
+                                                Log.d("test",
+                                                        "We've got data in data.");
+                                                // Decode the Byte[] into
+                                                // Bitmap
 
-                                            Bitmap bmp = BitmapFactory
-                                                    .decodeByteArray(
-                                                            data, 0,
-                                                            data.length);
+                                                Bitmap bmp = BitmapFactory
+                                                        .decodeByteArray(
+                                                                data, 0,
+                                                                data.length);
 
-                                            imageRotate(bmp);
+                                                imageRotate(bmp);
 
-                                            tvText.setVisibility(View.VISIBLE);
-                                            tvText.setText(text);
-                                            // Close progress dialog
-                                            bar.setVisibility(View.GONE);
-                                            timerEvent(startTime);
+                                                tvText.setVisibility(View.VISIBLE);
+                                                tvText.setText(text);
+                                                // Close progress dialog
+                                                bar.setVisibility(View.GONE);
+                                                timerEvent(startTime);
 
-                                        } else {
-                                            Log.d("test",
-                                                    "There was a problem downloading the data.");
+                                            } else {
+                                                Log.d("test",
+                                                        "There is a problem downloading the data.");
+                                            }
                                         }
-                                    }
-                                });
+                                    });
+                        }
+
 
 
                     }
                 });
 
     }
+public void loadGif(int startTime,File gifFile ){
 
+
+    try {
+        Glide.with(MessageDisplayActivity.this).load(gifFile).asGif().into(ivPhoto);
+    } catch (Exception e1) {
+        e1.printStackTrace();
+    }
+    bar.setVisibility(View.GONE);
+    timerEvent(startTime);
+}
     public void imageRotate(Bitmap bmp)
     {
 // Getting width & height of the given image.
@@ -125,16 +156,16 @@ public class MessageDisplayActivity extends AppCompatActivity {
         Matrix mtx = new Matrix();
         mtx.postRotate(-90); // anti-clockwise by 90 degrees
 // Rotating Bitmap
-        Bitmap rotatedBMP = Bitmap.createBitmap(bmp, 0, 0, w, h, mtx, true);
-        BitmapDrawable bmd = new BitmapDrawable(rotatedBMP);
-        ivPhoto.setImageBitmap(rotatedBMP);
+       Bitmap rotatedBMP = Bitmap.createBitmap(bmp, 0, 0, w, h, mtx, true);
+       BitmapDrawable bmd = new BitmapDrawable(rotatedBMP);
+       ivPhoto.setImageBitmap(rotatedBMP);
+
+
     }
-
-
 
     public void timerEvent(int startTime) {
         tvTimer.setVisibility(View.VISIBLE);
-        countDownTimer = new MyCountDownTimer((startTime * 1000), interval);
+        countDownTimer = new MDCountDownTimer((startTime * 1000), interval);
         tvTimer.setText(tvTimer.getText() + String.valueOf((startTime * 1000) / 1000));
         countDownTimer.start();
         ivPhoto.setOnClickListener(new View.OnClickListener() {
@@ -155,9 +186,9 @@ public class MessageDisplayActivity extends AppCompatActivity {
 
     }
 
-    public class MyCountDownTimer extends CountDownTimer {
+    public class MDCountDownTimer extends CountDownTimer {
 
-        public MyCountDownTimer(long startTime, long interval) {
+        public MDCountDownTimer(long startTime, long interval) {
 
             super(startTime, interval);
 

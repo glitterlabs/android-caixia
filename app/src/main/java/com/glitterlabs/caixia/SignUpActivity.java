@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -72,7 +78,7 @@ public class SignUpActivity extends AppCompatActivity {
         String passwordtext = etPassword.getText().toString();
 
         // Force user to fill up the form
-        if (nametext.equals("") && userNametext.equals("") && emailtext.equals("") && phonetext.equals("") && passwordtext.equals("")) {
+        if (nametext.trim().equalsIgnoreCase("") && userNametext.trim().equalsIgnoreCase("") && emailtext.trim().equalsIgnoreCase("") && phonetext.trim().equalsIgnoreCase("") && passwordtext.trim().equalsIgnoreCase("")) {
             Toast.makeText(getApplicationContext(),
                     "Please complete the sign up form",
                     Toast.LENGTH_LONG).show();

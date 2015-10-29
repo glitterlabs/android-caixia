@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Caixia</string>
+    <string name="app_name">Cǎixiá</string>
     <string name="title_activity_splash">SplashActivity</string>
 
     <string name="hello_world">Hello world!</string>
@@ -41,6 +41,9 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_my_friends_list">My Friends</string>
+    <string name="title_activity_gif">GifActivity</string>
+    <string name="title_activity_gif_preview">GifPreview</string>
+    <string name="title_activity_about">About</string>
 
 
 </resources>

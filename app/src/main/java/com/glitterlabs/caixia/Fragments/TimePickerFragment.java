@@ -1,5 +1,11 @@
 package com.glitterlabs.caixia.Fragments;
 
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -8,9 +14,7 @@ import android.app.TimePickerDialog.OnTimeSetListener;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-/**
- * Created by mohinish on 8/1/15.
- */
+
 public class TimePickerFragment extends DialogFragment {
 
     OnTimeSetListener onTimeSet;

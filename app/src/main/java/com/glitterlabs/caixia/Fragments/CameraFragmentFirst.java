@@ -1,9 +1,17 @@
 package com.glitterlabs.caixia.Fragments;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Environment;
@@ -34,8 +42,8 @@ import com.glitterlabs.caixia.MyFriendsActivity;
 import com.glitterlabs.caixia.R;
 import com.glitterlabs.caixia.util.GPSTracker;
 import com.glitterlabs.caixia.util.GeoPointParse;
-import com.glitterlabs.caixia.util.Helper;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -45,12 +53,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/*
-    Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
-    All rights reserved. Patents pending.
 
-    Responsible: Abhay Bhusari
- */
 public class CameraFragmentFirst extends Fragment {
     // Native camera.
     private Camera mCamera;
@@ -204,7 +207,7 @@ public class CameraFragmentFirst extends Fragment {
         ivSavePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                savePhoto();
+               File picture= savePhoto();
             }
         });
          // get geo point
@@ -242,8 +245,10 @@ public class CameraFragmentFirst extends Fragment {
                 messageData.setTextMessage(etTextToPhoto.getText().toString());
                 Intent i = new Intent(getActivity(), MyFriendsActivity.class);
                 Bundle bundle = new Bundle();
+
                 bundle.putSerializable("messageData", messageData);
                 i.putExtras(bundle);
+                i.putExtra("tag","png");
                 startActivity(i);
             }
         });
@@ -251,7 +256,7 @@ public class CameraFragmentFirst extends Fragment {
     }
 
     private void showTimePicker() {
-        String times[] = {"1 second", "2 seconds", "3 seconds", "4 seconds", "5 seconds", "6 seconds", "7 seconds", "8 seconds", " 9 seconds", "10 seconds"};
+        String times[] = {"1 sec", "2 sec", "3 sec", "4 sec", "5 sec", "6 sec", "7 sec", "8 sec", " 9 sec", "10 sec"};
         final Dialog dialog = new Dialog(getActivity());
         dialog.setTitle("Select Time");
         Window window = dialog.getWindow();
@@ -360,6 +365,7 @@ public class CameraFragmentFirst extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+        //releaseCameraAndPreview();
     }
 
     @Override
@@ -387,6 +393,7 @@ public class CameraFragmentFirst extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
         ivCancelPhoto.setVisibility(View.GONE);
         ivSwitchCamera.setVisibility(View.VISIBLE);
         ivCapture.setVisibility(View.VISIBLE);
@@ -406,34 +413,46 @@ public class CameraFragmentFirst extends Fragment {
             ivSwitchCamera.setVisibility(View.GONE);
             ivCancelPhoto.setVisibility(View.VISIBLE);
             mData=data;
-            messageData.setByteImage(data);
+          //  messageData.setByteImage(resizeImage(data));
+            messageData.setImageFile(savePhoto());
+
         }
     };
 
+    private byte[] resizeImage(byte[] input) {
+        Bitmap original = BitmapFactory.decodeByteArray(input, 0, input.length);
+        Bitmap resized = Bitmap.createScaledBitmap(original, 300, 300, true);
+
+        ByteArrayOutputStream blob = new ByteArrayOutputStream();
+        resized.compress(Bitmap.CompressFormat.JPEG, 100, blob);
+
+        return blob.toByteArray();
+    }
     /**
      * Used to return the camera File output.
      *
      * @return
      */
 
-    private void savePhoto(){
+    private  File savePhoto(){
         File pictureFile = getOutputMediaFile();
         if (pictureFile == null) {
             Toast.makeText(getActivity(), "Image retrieval failed.", Toast.LENGTH_SHORT)
                     .show();
-            return;
+            return null;
         }
         try {
             FileOutputStream fos = new FileOutputStream(pictureFile);
             fos.write(mData);
             fos.close();
 
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return pictureFile;
     }
     private File getOutputMediaFile() {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
@@ -451,7 +470,7 @@ public class CameraFragmentFirst extends Fragment {
         mediaFile = new File(mediaStorageDir.getPath() + File.separator +
                 "IMG_" + timeStamp + ".jpg");
 
-        Helper.showDialog("Success!", "Your picture has been saved!", getActivity());
+       // Helper.showDialog("Success!", "Your picture has been saved!", getActivity());
         return mediaFile;
     }
 

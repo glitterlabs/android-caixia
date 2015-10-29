@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.util;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.app.Service;
 import android.content.Context;
@@ -14,9 +20,7 @@ import android.widget.Toast;
 
 import com.parse.ParseGeoPoint;
 
-/**
- * Created by mohinish on 8/28/15.
- */
+
 public class GpsHelper extends Service implements LocationListener {
     public ParseGeoPoint point;
     private LocationManager locationManager;

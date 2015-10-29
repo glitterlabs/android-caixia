@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia.Adapters;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +16,7 @@ import android.widget.TextView;
 import com.glitterlabs.caixia.R;
 
 
-/**
- * Created by mohinish on 8/8/15.
- */
+
 public class TimerAdapter extends BaseAdapter {
 
     Context mContext;

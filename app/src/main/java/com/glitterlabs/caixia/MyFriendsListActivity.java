@@ -1,4 +1,10 @@
 package com.glitterlabs.caixia;
+/**
+ * Copyright (c) 2015-2020 Glitter Technology Ventures, LLC.
+ * All rights reserved. Patents pending.
+ * Responsible: Abhay Bhusari
+ *
+ */
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -42,7 +48,7 @@ public class MyFriendsListActivity extends AppCompatActivity {
         mlist = new ArrayList<Friend>();
         if (cursor.getCount() == 0) {
             // no data found
-            Toast.makeText(MyFriendsListActivity.this, "No frend is added, add your friend and try again.",
+            Toast.makeText(MyFriendsListActivity.this, "No friend found.",
                     Toast.LENGTH_LONG).show();
             return mlist;
         } else {
