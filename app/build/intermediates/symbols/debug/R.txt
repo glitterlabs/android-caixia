@@ -743,8 +743,8 @@ int id action_menu_presenter 0x7f100003
 int id action_mode_bar 0x7f100040
 int id action_mode_bar_stub 0x7f10003f
 int id action_mode_close_button 0x7f100028
-int id action_search 0x7f1000c4
-int id action_settings 0x7f1000c3
+int id action_search 0x7f1000c3
+int id action_settings 0x7f1000c4
 int id activity_chooser_view_content 0x7f100029
 int id addFriend 0x7f1000c6
 int id age_edit_text 0x7f100065

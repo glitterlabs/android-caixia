@@ -28,19 +28,18 @@ public class SignUpActivity extends AppCompatActivity {
     private Button btnSignUp;
     private TextView tvLogin;
     private int i = 0;
+    private boolean signUpStatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
         etName = (EditText) findViewById(R.id.etName);
         etUserName = (EditText) findViewById(R.id.etUserName_SignUp);
         etEmailId = (EditText) findViewById(R.id.etEmailId_SignUp);
         etPhone = (EditText) findViewById(R.id.etPhone_SignUp);
         etPassword = (EditText) findViewById(R.id.etPassword_SignUp);
-
         btnSignUp = (Button) findViewById(R.id.btnSignUp_SignUp);
         tvLogin = (TextView) findViewById(R.id.tvLogin_SignUp);
         tvLogin.setOnClickListener(new View.OnClickListener() {
@@ -49,14 +48,19 @@ public class SignUpActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         btnSignUp.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
 
                     if (Helper.isNetworkConnected(SignUpActivity.this)) {
-                        signUp();
+                        // Retrieve the text entered from the EditText
+                        String nametext = etName.getText().toString().trim();
+                        String userNametext = etUserName.getText().toString().trim();
+                        String emailtext = etEmailId.getText().toString().trim();
+                        String phonetext = etPhone.getText().toString().trim();
+                        String passwordtext = etPassword.getText().toString();
+
+                        signUp(nametext,userNametext,emailtext,phonetext,passwordtext);
 
                     } else {
                         Helper.showDialog("Network Error", "Please check your internet connection and try again.", SignUpActivity.this);
@@ -68,17 +72,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public void signUp() {
+    public void signUp(String nametext,String userNametext,String emailtext, String phonetext,String passwordtext) {
 
-        // Retrieve the text entered from the EditText
-        String nametext = etName.getText().toString().trim();
-        String userNametext = etUserName.getText().toString().trim();
-        String emailtext = etEmailId.getText().toString().trim();
-        String phonetext = etPhone.getText().toString().trim();
-        String passwordtext = etPassword.getText().toString();
 
         // Force user to fill up the form
-        if (nametext.trim().equalsIgnoreCase("") && userNametext.trim().equalsIgnoreCase("") && emailtext.trim().equalsIgnoreCase("") && phonetext.trim().equalsIgnoreCase("") && passwordtext.trim().equalsIgnoreCase("")) {
+        if (nametext.equalsIgnoreCase("") && userNametext.equalsIgnoreCase("") && emailtext.equalsIgnoreCase("") && phonetext.equalsIgnoreCase("") && passwordtext.equalsIgnoreCase("")) {
             Toast.makeText(getApplicationContext(),
                     "Please complete the sign up form",
                     Toast.LENGTH_LONG).show();
@@ -99,14 +97,14 @@ public class SignUpActivity extends AppCompatActivity {
                 public void done(ParseException e) {
                     progressDialog.dismiss();
                     if (e == null) {
-
+                        signUpStatus=true;
                         // Show a simple Toast message upon successful registration
-
                         Toast.makeText(getApplicationContext(),
                                 "Successfully Signed up",
                                 Toast.LENGTH_LONG).show();
                         finish();
                     } else {
+                        signUpStatus=false;
                         Toast.makeText(getApplicationContext(),
                                 "Sign up Error", Toast.LENGTH_LONG)
                                 .show();
@@ -118,7 +116,10 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     }
-
+    public boolean getSignUpStatus ()
+    {
+        return signUpStatus;
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

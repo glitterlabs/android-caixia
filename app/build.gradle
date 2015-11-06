@@ -5,8 +5,13 @@ android {
     buildToolsVersion '22.0.1'
     defaultConfig {
         applicationId "com.glitterlabs.caixia"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         minSdkVersion 16
         targetSdkVersion 22
+
+
+
+
     }
 
     buildTypes {
@@ -71,6 +76,10 @@ dependencies {
     //to capture multiple photos by camera
     compile 'com.github.jaydeepw:poly-picker:v1.0.22'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+    // Set this dependency if you want to use Hamcrest matching
 
 
 }

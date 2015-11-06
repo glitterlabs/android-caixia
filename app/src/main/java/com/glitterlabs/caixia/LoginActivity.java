@@ -31,11 +31,10 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmailId, etPassword;
     private TextView tvSignUp;
     static final String GOOGLE_SENDER_ID = "1043488337868";  // Place here your Google project id
-
+    private static boolean loginStatus = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_login);
         etEmailId = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
@@ -45,8 +44,10 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                String userNametext = etEmailId.getText().toString().trim();
+                String passwordtext = etPassword.getText().toString().trim();
                 if (Helper.isNetworkConnected(LoginActivity.this)) {
-                      login();
+                      login(userNametext,passwordtext);
                 } else {
                     Helper.showDialog("Network Error","Please check your internet connection and try again.",LoginActivity.this );
                 }
@@ -58,46 +59,52 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void login() {
-
-
-        String userNametext = etEmailId.getText().toString().trim();
-        String passwordtext = etPassword.getText().toString().trim();
+    public void login(String userNametext,String passwordtext) {
 
         final ProgressDialog progressDialog = ProgressDialog.show(LoginActivity.this, null,
                 getString(R.string.alert_wait));
         // Send data to Parse.com for verification
         ParseUser.logInInBackground(userNametext, passwordtext,
-                new LogInCallback() {
-                    public void done(ParseUser user, ParseException e) {
-                        progressDialog.dismiss();
-                        if (user != null) {
+               new LogInCallback() {
+                   public void done(ParseUser user, ParseException e) {
+                       progressDialog.dismiss();
 
-                            // If user exist and authenticated, send user to MainActivity.class
+                       if (user != null) {
 
-                            String userName = user.getString("username");
-                            String userId = user.getObjectId();
-                            //save installation state for push notificatipon
-                            //   saveInstallationState(userId);
-                            //start main activity
-                            Intent intent = new Intent(
-                                    LoginActivity.this,
-                                    MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(getApplicationContext(),
-                                    "Login Success",
-                                    Toast.LENGTH_LONG).show();
-                            finish();
-                        } else {
-                            Toast.makeText(
-                                    getApplicationContext(),
-                                    "User not found",
-                                    Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+                           // If user exist and authenticated, send user to MainActivity.class
+
+                           String userName = user.getString("username");
+                           String userId = user.getObjectId();
+                           loginStatus = true;
+                           //save installation state for push notificatipon
+                           //   saveInstallationState(userId);
+                           //start main activity
+                           Intent intent = new Intent(
+                                   LoginActivity.this,
+                                   MainActivity.class);
+                           startActivity(intent);
+                           Toast.makeText(getApplicationContext(),
+                                   "Login Success",
+                                   Toast.LENGTH_LONG).show();
+
+                           finish();
 
 
+                       } else {
+                            loginStatus = false;
+                           Toast.makeText(
+                                   getApplicationContext(),
+                                   "User not found",
+                                   Toast.LENGTH_LONG).show();
+
+                       }
+                   }
+               });
+    }
+
+    public boolean getLoginStatus ()
+    {
+        return loginStatus;
     }
 
 public void saveInstallationState(String currentUserId){

@@ -2073,8 +2073,8 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f100040;
         public static final int action_mode_bar_stub=0x7f10003f;
         public static final int action_mode_close_button=0x7f100028;
-        public static final int action_search=0x7f1000c4;
-        public static final int action_settings=0x7f1000c3;
+        public static final int action_search=0x7f1000c3;
+        public static final int action_settings=0x7f1000c4;
         public static final int activity_chooser_view_content=0x7f100029;
         public static final int addFriend=0x7f1000c6;
         public static final int age_edit_text=0x7f100065;

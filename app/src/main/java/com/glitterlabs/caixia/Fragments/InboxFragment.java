@@ -94,6 +94,7 @@ public class InboxFragment extends Fragment {
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
         lvInbox = (ListView) view.findViewById(R.id.lvInbox);
         this.mContext=getActivity();
+
         getInboxData();
 
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.appBar);
@@ -259,7 +260,7 @@ public class InboxFragment extends Fragment {
     public void getInboxData() {
 
         final ArrayList<InboxList> inboxData = new ArrayList<InboxList>();
-        final ProgressDialog progressDialog = ProgressDialog.show(getActivity(), null,
+       final ProgressDialog progressDialog = ProgressDialog.show(getActivity(), null,
                 getString(R.string.alert_wait));
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Inbox");
@@ -269,7 +270,7 @@ public class InboxFragment extends Fragment {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objects, ParseException e) {
 
-                progressDialog.dismiss();
+               progressDialog.dismiss();
 
                 if (e == null) {
 
