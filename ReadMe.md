@@ -2,16 +2,16 @@
 
 
 
-    ### Website: ###
+     ### Website: ### 
         http://caixia.launchrock.com 
 
 ### Company Website: ###
     www.glitterlabs.com
 
- ###    Updated: ###
+ ### Updated: ###
     October 28, 2015
 
-  ###   Current Version ###
+  ### Current Version ###
         1.0
 
     ### Requires Android ###
