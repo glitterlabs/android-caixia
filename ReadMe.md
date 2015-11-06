@@ -6,7 +6,7 @@
         http://caixia.launchrock.com 
 
 ### Company Website: ###
-    www.glitterlabs.com</p>
+    www.glitterlabs.com
 
  ###    Updated: ###
     October 28, 2015
@@ -57,4 +57,3 @@
 
 
   [Demo Link:](https://bitbucket.org/glitterlab/caixia/src/67baf64fbb429d12145617642b631dd4d4779491/Demo/CiaxiaDemo.gif?at=master&fileviewer=file-view-default)
-    
