@@ -1,17 +1,16 @@
-<Html>
-<Head><h1>Caixia - Your Local Cherish Memories in GIF.</h1>
-</Head>
-<>
+<P><h1>Caixia - Your Local Cherish Memories in GIF.</h1></p>
+
+
 <p>
-    < Website:
+    Website:
         http://caixia.launchrock.com </p>
 
 <p> Company Website:
     www.glitterlabs.com</p>
-<p><h3>
+<p>
     Updated
     October 28, 2015
-</h3></p>
+
 <p><h3>
     Current Version
     1.0
@@ -64,6 +63,3 @@
     <img border="0" alt="W3Schools" src="https://bitbucket.com/bhusarisuccess/Caixia/Demo/CiaxiaDemo.gif" width="100%" height="100%"> <br>
 </a>
 </p>
-
-</Body>
-</Html>
