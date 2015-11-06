@@ -1,23 +1,21 @@
 # Caixia - Your Local Cherish Memories in GIF. #
 
-
-
-     ### Website: ### 
+     Website:
         http://caixia.launchrock.com 
 
-### Company Website: ###
+** Company Website:** 
     www.glitterlabs.com
 
- ### Updated: ###
+** Updated:** 
     October 28, 2015
 
-  ### Current Version ###
+** Current Version:**
         1.0
 
-    ### Requires Android ###
+    **Requires Android:** 
     4.1 and up
 
-    ### Offered By ###
+    **Offered By:**
     Glitter Technology Ventures LLC
 
 
@@ -38,6 +36,7 @@
     Please feel free to provide feedback via the feedback option in the application.
 
 **This version contain bug as bellow.**
+
     1)	Camera not working some of devices
     2)	Remove unwanted toast messages
     3)	When send poto to friend, friend dont get any notification
