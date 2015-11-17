@@ -9,7 +9,6 @@ package com.glitterlabs.caixia;
  */
 
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -49,15 +48,16 @@ private  SignUpActivity mSignUpActivity;
         assertNotNull("mUserPhone is null", mUserPhone);
         assertNotNull("mUserpassword is null", mUserpassword);
         assertNotNull("mBtnSignUp is null", mBtnSignUp);
+        assertNotNull("textGoToLogin is null", textGoToLogin);
 
     }
-    @MediumTest
-    public void testInfoTextViewText_isEmpty() {
+   /* @MediumTest
+    public void testInfoTextViewTextIsEmpty() {
         //Verify that the mInfoTextView is initialized with the correct default value
         assertEquals("", textGoToLogin.getText());
 
-    }
-    public void testMyUserLogin_login() throws InterruptedException {
+    }*/
+    public void testUserSignUp() throws InterruptedException {
 
         mSignUpActivity.signUp("Ramesh Yadav", "ramesh","ramesh.yadav@gmail.com","9423456456","123");
         Thread.sleep(10000);

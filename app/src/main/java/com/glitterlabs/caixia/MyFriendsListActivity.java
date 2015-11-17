@@ -37,7 +37,6 @@ public class MyFriendsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_friends_list);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
         lvFriends = (ListView) findViewById(R.id.lvMyFrendsListView);
         mAdapter = new MyFriendsListAdapter(this, getAllFrends());
         lvFriends.setAdapter(mAdapter);

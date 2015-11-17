@@ -635,7 +635,7 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with = 0x7f09000b;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f09000c;
 		public static final int abc_toolbar_collapse_description = 0x7f09001a;
-		public static final int app_name = 0x7f090024;
+		public static final int app_name = 0x7f090025;
 		public static final int cancel = 0x7f09000d;
 		public static final int done = 0x7f09000e;
 		public static final int gallery = 0x7f09000f;
@@ -645,7 +645,7 @@ public final class R {
 		public static final int no_images_selected = 0x7f090013;
 		public static final int photo_save_error_toast = 0x7f090014;
 		public static final int progress_title = 0x7f090015;
-		public static final int status_bar_notification_info_overflow = 0x7f09003a;
+		public static final int status_bar_notification_info_overflow = 0x7f09003b;
 		public static final int take_photo = 0x7f090016;
 	}
 	public static final class style {

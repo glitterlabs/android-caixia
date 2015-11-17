@@ -46,6 +46,7 @@ import com.parse.SendCallback;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -248,9 +249,10 @@ public class InboxFragment extends Fragment {
                     @Override
                     public void done(ParseException e) {
                         if (e == null) {
+
                             Toast.makeText(getActivity(), "Success push", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(getActivity(), "fail push", Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getActivity(), "fail push", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -270,7 +272,7 @@ public class InboxFragment extends Fragment {
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> objects, ParseException e) {
 
-               progressDialog.dismiss();
+                progressDialog.dismiss();
 
                 if (e == null) {
 
@@ -279,8 +281,11 @@ public class InboxFragment extends Fragment {
                         inboxList.setItemId(objects.get(i).getObjectId());
                         inboxList.setSenderName(objects.get(i).getString("senderName"));
                         inboxList.setTextMessage(objects.get(i).getString("text"));
-                        inboxList.setCurrentTime(getCurrentTime());
+                        // inboxList.setCurrentTime(getCurrentTime());
                         inboxList.setStatus(objects.get(i).getInt("isSeen"));
+                        Date date = objects.get(i).getCreatedAt();
+                        inboxList.setCurrentTime(getMessageTime(date));
+                        //inboxList.setCurrentTime(date.toGMTString());
                         inboxData.add(inboxList);
 
                     }
@@ -300,6 +305,15 @@ public class InboxFragment extends Fragment {
 
         });
 
+    }
+
+    private String getMessageTime(Date date) {
+        long unixdate = date.getTime();
+        DateFormat formatter = new SimpleDateFormat("hh:mm a");
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(unixdate * 1000);
+        String strDate =formatter.format(calendar.getTime());
+        return strDate;
     }
     private String getCurrentTime() {
         Calendar c = Calendar.getInstance();

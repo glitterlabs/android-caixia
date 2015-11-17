@@ -20,6 +20,7 @@ import com.glitterlabs.caixia.Models.MessageData;
 import com.glitterlabs.caixia.util.Helper;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
@@ -87,7 +88,10 @@ public class MyFriendsActivity extends AppCompatActivity {
                 inbox.put("text", messageData.getTextMessage());
                 inbox.put("timeToDisplayImage", messageData.getTimeForDisplay());
                 inbox.put("scheduledDate", messageData.getScheduldDate());
-                inbox.put("location", messageData.getGeoPoint());
+                ParseGeoPoint geopoint=  messageData.getGeoPoint();
+                if(geopoint!=null){
+                    inbox.put("location", messageData.getGeoPoint());
+                }
                 inbox.put("image", parseImgeFile);
                 inbox.put("imageType",tag );
                 inbox.put("isSeen",0);

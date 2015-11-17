@@ -30,14 +30,9 @@ public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 
     }
 
-    public void testPreconditions() {
 
-       // assertNotNull("mUserName is null", mUserName);
-      //  assertNotNull("mPassword is null", mPassword);
 
-    }
-
-    public void testMyUserLogin_login() throws InterruptedException {
+    public void testUserLogin() throws InterruptedException {
 
         mloginActivity.login("abhay", "123");
         Thread.sleep(10000);

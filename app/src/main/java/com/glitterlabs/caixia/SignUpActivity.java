@@ -99,9 +99,9 @@ public class SignUpActivity extends AppCompatActivity {
                     if (e == null) {
                         signUpStatus=true;
                         // Show a simple Toast message upon successful registration
-                        Toast.makeText(getApplicationContext(),
+                        /*Toast.makeText(getApplicationContext(),
                                 "Successfully Signed up",
-                                Toast.LENGTH_LONG).show();
+                                Toast.LENGTH_LONG).show();*/
                         finish();
                     } else {
                         signUpStatus=false;

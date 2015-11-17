@@ -535,10 +535,11 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <!-- From: file:/Users/mohinish/Desktop/Caixia/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="about_text">Caixia Your Cherished Moments in GIF.</string>
     <string name="action_about">About</string>
     <string name="action_add_fiends">Add Friends</string>
     <string name="action_feedback">Review</string>
-    <string name="action_logout">log out</string>
+    <string name="action_logout">Logout</string>
     <string name="action_settings">Setting</string>
     <string name="action_shareApp">Share App</string>
     <string name="action_sign_in">Sign in or register</string>

@@ -83,9 +83,9 @@ public class LoginActivity extends AppCompatActivity {
                                    LoginActivity.this,
                                    MainActivity.class);
                            startActivity(intent);
-                           Toast.makeText(getApplicationContext(),
+                          /* Toast.makeText(getApplicationContext(),
                                    "Login Success",
-                                   Toast.LENGTH_LONG).show();
+                                   Toast.LENGTH_LONG).show();*/
 
                            finish();
 

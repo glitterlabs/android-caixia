@@ -66,7 +66,6 @@ public class GIFPreviewActivity extends AppCompatActivity {
         ivText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                etTextMessage.setVisibility(View.VISIBLE);
             }
         });

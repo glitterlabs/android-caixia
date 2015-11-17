@@ -9,7 +9,6 @@ package com.glitterlabs.caixia;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.glitterlabs.caixia.Adapters.PagerAdapter;
 import com.parse.ParseAnalytics;
@@ -50,20 +49,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveUserProfile(){
 
+
         ParseInstallation installation= ParseInstallation.getCurrentInstallation();
         installation.put("userId", ParseUser.getCurrentUser().getObjectId());
-
         ParseInstallation.getCurrentInstallation().saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 if (e == null) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT);
-                    toast.show();
+                   /* Toast toast = Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT);
+                    toast.show();*/
                 } else {
                     e.printStackTrace();
-
+/*
                     Toast toast = Toast.makeText(getApplicationContext(), "fail", Toast.LENGTH_SHORT);
-                    toast.show();
+                    toast.show();*/
                 }
             }
         });

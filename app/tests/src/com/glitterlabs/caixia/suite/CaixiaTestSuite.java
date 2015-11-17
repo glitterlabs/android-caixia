@@ -13,8 +13,12 @@ import org.junit.runners.Suite;
 
 // Runs all unit tests.
 @RunWith(Suite.class)
-@Suite.SuiteClasses({SignUpTest.class,LoginTest.class
+
+@Suite.SuiteClasses({
+            SignUpTest.class,
+            LoginTest.class
         })
+
 public class CaixiaTestSuite {
 
 

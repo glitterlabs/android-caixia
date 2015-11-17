@@ -3,7 +3,7 @@
     <string name="title_activity_splash">SplashActivity</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_logout">log out</string>
+    <string name="action_logout">Logout</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
 
@@ -44,6 +44,7 @@
     <string name="title_activity_gif">GifActivity</string>
     <string name="title_activity_gif_preview">GifPreview</string>
     <string name="title_activity_about">About</string>
+    <string name="about_text">Caixia Your Cherished Moments in GIF.</string>
 
 
 </resources>

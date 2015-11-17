@@ -79,9 +79,10 @@ public class SearchFriendAdapter extends BaseAdapter {
 
     public void addFriend(String name, String userName, String userId) {
         boolean isInsert = mdatabase.insertData(name, userName, userId);
-        if (isInsert == true)
-            Toast.makeText(mContext, "Friend Added Successfull", Toast.LENGTH_LONG).show();
-        else
+        if (isInsert == true) {
+            // Toast.makeText(mContext, "Friend Added Successfull", Toast.LENGTH_LONG).show();
+        } else {
             Toast.makeText(mContext, "Friend not added", Toast.LENGTH_LONG).show();
+        }
     }
 }

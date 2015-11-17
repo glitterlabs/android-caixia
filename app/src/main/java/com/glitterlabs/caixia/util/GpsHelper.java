@@ -39,7 +39,6 @@ public class GpsHelper extends Service implements LocationListener {
         String msg = "New Latitude: " + location.getLatitude()
                 + "New Longitude: " + location.getLongitude();
         point = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
-
         Toast.makeText(mcontext, msg, Toast.LENGTH_LONG).show();
 
     }
