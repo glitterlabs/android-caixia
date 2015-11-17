@@ -41,23 +41,15 @@
 
     Please feel free to provide feedback via the feedback option in the application.
 </P>
-<p><h6>This version contain bug as bellow.</h6></p>
-    1)	Camera not working some of devices
-    2)	Remove unwanted toast messages
-    3)	When send poto to friend, friend dont get any notification
-    4)	User can not delete or remove friend for friend list
-    5)	GIF Creation Process is slow.
-    6)	Photo Preview screen not working properly (It work first time )
-    7)	Message not showing correct time in inbox list
-    8)	Notification not working
-    9)	Log out - Case should be Camel Case
-    10)	when user camera switch front to back , camera chages orientation.
-    11)	When Location is disabled - Application crashes when GIF is sent to friend.
-    12)	About - Fix Content and Formatting
-    13)	About - Settings link doesnt work
-    14)	Fix Caixia - Name across the application
-    15)	Lat n Long shows 0 event after GPS is enabled
-    16)	Default Functionality is Missing - if photo or GIF is taken by default it should appear in users preview same date or same time
+<p><h6>This version Fixed bug as bellow.</h6></p>
+1 Remove unwanted toast messages---------------------------Done
+2 Message not showing correct time in inbox list---------------------------Done	
+3 Log out - Case should be Camel Case ---------------------------Done
+4 When Location is disabled - Application crashes when GIF is sent to friend.---------------------------Done
+5 About - Fix Content and Formatting ---------------------------Done
+6 About - Settings link doesnt work ---------------------------Done
+7 Fix Caixia - Name across the application ---------------------------Done
+8 Lat n Long shows 0 event after GPS is enabled ---------------------------Done
 </h6></p>
 <p>
     Demo Link: <a href="https://bitbucket.com/bhusarisuccess/Caixia/Demo/CiaxiaDemo.gif"> <br> <br>
