@@ -70,7 +70,7 @@ public class CameraFragmentFirst extends Fragment {
     //create object of MessageData class to set all meassage data
     MessageData messageData = new MessageData();
     private byte[] mData;
-
+    FrameLayout preview;
     //Default empty constructor.
     public CameraFragmentFirst() {
         super();
@@ -87,7 +87,6 @@ public class CameraFragmentFirst extends Fragment {
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
-
         return fragment;
     }
 
@@ -182,7 +181,8 @@ public class CameraFragmentFirst extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mCamera.stopPreview();
+                        switchCamera();
+                        /*mCamera.stopPreview();
                         //  }
                         //NB: if you don't release the current camera before switching, you app will crash
                         releaseCameraAndPreview();
@@ -201,7 +201,10 @@ public class CameraFragmentFirst extends Fragment {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+
                         mCamera.startPreview();
+
+*/
                     }
                 });
         ivSavePhoto.setOnClickListener(new View.OnClickListener() {
@@ -217,7 +220,6 @@ public class CameraFragmentFirst extends Fragment {
                 GeoPointParse point = null;
                 // create class object
                 GPSTracker gpsTracker = new GPSTracker(getActivity());
-
                 // check if GPS enabled
                 if (gpsTracker.canGetLocation()) {
 
@@ -254,7 +256,64 @@ public class CameraFragmentFirst extends Fragment {
         });
 
     }
+    private void switchCamera() {
+        if (mCamera != null) {
+            mCamera.setPreviewCallback(null);
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+            try {
+                if (camId == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+                    camId = Camera.CameraInfo.CAMERA_FACING_BACK;
+                }
+                else {
+                    camId = Camera.CameraInfo.CAMERA_FACING_FRONT;
+                }
+                releaseCameraAndPreview();
+                mCamera = Camera.open(camId);
+                mCamera.setPreviewDisplay(mPreview.getHolder());
+                mCamera.startPreview();
+                setCameraDisplayOrientation();
+            }
+            catch (final Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void setCameraDisplayOrientation()
+    {
+        if (mCamera == null)
+        {
+           // Log.d(TAG,"setCameraDisplayOrientation - camera null");
+            return;
+        }
 
+        Camera.CameraInfo info = new Camera.CameraInfo();
+        Camera.getCameraInfo(camId, info);
+
+        WindowManager winManager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
+        int rotation = winManager.getDefaultDisplay().getRotation();
+
+        int degrees = 0;
+
+        switch (rotation)
+        {
+            case Surface.ROTATION_0: degrees = 0; break;
+            case Surface.ROTATION_90: degrees = 90; break;
+            case Surface.ROTATION_180: degrees = 180; break;
+            case Surface.ROTATION_270: degrees = 270; break;
+        }
+
+        int result;
+        if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT)
+        {
+            result = (info.orientation + degrees) % 360;
+            result = (360 - result) % 360;  // compensate the mirror
+        } else {  // back-facing
+            result = (info.orientation - degrees + 360) % 360;
+        }
+        mCamera.setDisplayOrientation(result);
+    }
     private void showTimePicker() {
         String times[] = {"1 sec", "2 sec", "3 sec", "4 sec", "5 sec", "6 sec", "7 sec", "8 sec", " 9 sec", "10 sec"};
         final Dialog dialog = new Dialog(getActivity());
@@ -365,7 +424,7 @@ public class CameraFragmentFirst extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        //releaseCameraAndPreview();
+        releaseCameraAndPreview();
     }
 
     @Override
@@ -393,7 +452,7 @@ public class CameraFragmentFirst extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
+        mPreview.startCameraPreview();
         ivCancelPhoto.setVisibility(View.GONE);
         ivSwitchCamera.setVisibility(View.VISIBLE);
         ivCapture.setVisibility(View.VISIBLE);

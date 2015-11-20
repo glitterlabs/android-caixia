@@ -19,6 +19,7 @@ public class DatePickerFragment extends DialogFragment {
     OnDateSetListener ondateSet;
 
     public DatePickerFragment() {
+
     }
 
     public void setCallBack(OnDateSetListener ondate) {
